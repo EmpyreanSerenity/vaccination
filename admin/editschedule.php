@@ -6,17 +6,17 @@ $dao=new DataAccess();
 $info=$dao->getData('*','schedule','sid='.$_GET['id']);
 
 $elements=array(
-    "date"=>$info[0]['date'],"hname"=>$info[0]['hname'],"vname"=>$info[0]['vname'],"qnty"=>$info[0]['qnty']);
+    "date"=>$info[0]['date'],"hname"=>$info[0]['hname'],"vname"=>$info[0]['vname'],"quantity"=>$info[0]['quantity']);
 
 $form=new FormAssist($elements,$_POST);
 
-$labels=array('date'=>"DATE",'hname'=>"Healthcenter name",'vname'=>" Vaccination name",'qnty'=>" Quantity");
+$labels=array('date'=>"DATE",'hname'=>"Healthcenter name",'vname'=>" Vaccination name",'quantity'=>" Quantity");
 
 $rules=array(
     "date"=>array("required"=>true),
     "hname"=>array("required"=>true),
     "vname"=>array("required"=>true),
-    "qnty"=>array("required"=>true,"minlength"=>1,"maxlength"=>4,"integeronly"=>true),
+    "quantity"=>array("required"=>true,"minlength"=>1,"maxlength"=>4,"integeronly"=>true),
 );
     
     
@@ -32,7 +32,7 @@ $data=array(
         'date'=>$_POST['date'],
         'hname'=>$_POST['hname'],
         'vname'=>$_POST['vname'],
-        'qnty'=>$_POST['qnty'],
+        'quantity'=>$_POST['quantity'],
          
     );
 
@@ -99,8 +99,8 @@ Vaccination name:
                     <div class="col-md-6">
 Quantity:
 
-<?= $form->textBox('qnty',array('class'=>'form-control')); ?>
-<?= $validator->error('qnty'); ?>
+<?= $form->textBox('quantity',array('class'=>'form-control')); ?>
+<?= $validator->error('quantity'); ?>
 
 </div>
 </div>

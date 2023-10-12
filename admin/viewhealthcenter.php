@@ -20,7 +20,7 @@ $dao=new DataAccess();
                         <th>Id</th>
                         <th>Healthcenter name</th>
                         <th>Healthcenter region</th>
-                        
+                        <th>Healthcenter Image</th>
                         <th>EDIT/DELETE</th>
                      
                       
@@ -28,15 +28,20 @@ $dao=new DataAccess();
 <?php
     
     $actions=array(
-    'edit'=>array('label'=>'Edit','link'=>'edithlthcenter.php','params'=>array('id'=>'hid'),'attributes'=>array('class'=>'btn btn-success')),
+    'edit'=>array('label'=>'Edit','link'=>'edithealthcenter.php','params'=>array('id'=>'hid'),'attributes'=>array('class'=>'btn btn-success')),
     
-    'delete'=>array('label'=>'Delete','link'=>'deletehl.php','params'=>array('id'=>'hid'),'attributes'=>array('class'=>'btn btn-success'))
+    'delete'=>array('label'=>'Delete','link'=>'deletehealthcenter.php','params'=>array('id'=>'hid'),'attributes'=>array('class'=>'btn btn-success'))
     
     );
 
     $config=array(
         'srno'=>true,
         'hiddenfields'=>array('hid'),
+        'actions_td'=>false,
+        'himages'=>array(
+                        'field'=>'himage',
+                        'path'=>'../uploads/',
+                        'attributes'=>array('style'=>'width:100px;'))
         
         
     );
@@ -45,9 +50,9 @@ $dao=new DataAccess();
    $join=array(
         
     );
-     $fields=array('hid','hname','hregion');
+     $fields=array('hid','hname','hregion','himage');
 
-    $users=$dao->selectAsTable($fields,'healthcenter','flage=1',$join,$actions,$config);
+    $users=$dao->selectAsTable($fields,'healthcenter','status=1',$join,$actions,$config);
     
     echo $users;
                     

@@ -17,12 +17,10 @@ $dao=new DataAccess();
                 <table  border="1" class="table" style="margin-top:100px;">
                     <tr>
                         <th>ID</th>
-                        <th>DATE</th>
+                        <th>Date</th>
                         <th>Healthcenter name</th>
                         <th>Vaccination name</th>
                         <th>Quantity</th>
-                        
-                        
                         <th>EDIT/DELETE</th>
                      
                       
@@ -32,7 +30,7 @@ $dao=new DataAccess();
     $actions=array(
     'edit'=>array('label'=>'Edit','link'=>'editschedule.php','params'=>array('id'=>'sid'),'attributes'=>array('class'=>'btn btn-success')),
     
-    'delete'=>array('label'=>'Delete','link'=>'deletesh.php','params'=>array('id'=>'sid'),'attributes'=>array('class'=>'btn btn-success'))
+    'delete'=>array('label'=>'Delete','link'=>'deleteschedule.php','params'=>array('id'=>'sid'),'attributes'=>array('class'=>'btn btn-success'))
     
     );
 
@@ -47,9 +45,9 @@ $dao=new DataAccess();
    $join=array(
         
     );
-     $fields=array('sid','date','hname','vname','qnty');
+     $fields=array('sid','date','hname','vname','quantity');
 
-    $users=$dao->selectAsTable($fields,'schedule','flag=1',$join,$actions,$config);
+    $users=$dao->selectAsTable($fields,'schedule','status=1',$join,$actions,$config);
     
     echo $users;
                     

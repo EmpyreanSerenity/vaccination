@@ -75,7 +75,7 @@ $data=array(
  
 <div class="row">
                     <div class="col-md-6">
-Name:
+Healthcenter Name:
 
 <?= $form->textBox('hname',array('class'=>'form-control')); ?>
 <?= $validator->error('hname'); ?>
@@ -85,7 +85,7 @@ Name:
 
 <div class="row">
                     <div class="col-md-6">
-Health Center:
+Healthcenter Region:
 
 <?= $form->textBox('hregion',array('class'=>'form-control')); ?>
 <?= $validator->error('hregion'); ?>
@@ -93,11 +93,18 @@ Health Center:
 </div>
 </div>
 
+<div class="row">
+                    <div class="col-md-6">
+Healthcenter Image:
+
+
+<?= $form->fileField('himage',array('class'=>'form-control')); ?>
+
+</div>
+</div>
 
 <div class="row">
                     <div class="col-md-6">
-
-
 
 <button type="submit" name="update"  >UPDATE</button>
 </form>

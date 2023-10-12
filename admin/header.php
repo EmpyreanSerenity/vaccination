@@ -312,13 +312,6 @@
             </div>
           </li>
           <li class="nav-item">
-            <a class="nav-link" data-toggle="collapse" href="healthcenter.php" aria-expanded="false" aria-controls="form-elements">
-              <i class="icon-columns menu-icon"></i>
-              <span class="menu-title">Helath Center</span>
-              <i class="menu-arrow"></i>
-            </a>
-           
-          <li class="nav-item">
             <a class="nav-link" data-toggle="collapse" href="viewvaccination.php" aria-expanded="false" aria-controls="tables">
               <i class="icon-grid-2 menu-icon"></i>
               <span class="menu-title">View Vaccination</span>
@@ -331,9 +324,15 @@
             </div>
           </li>
           <li class="nav-item">
-            <a class="nav-link" data-toggle="collapse" href="viewhlthcenter.php" aria-expanded="false" aria-controls="icons">
+            <a class="nav-link" data-toggle="collapse" href="healthcenter.php" aria-expanded="false" aria-controls="form-elements">
+              <i class="icon-columns menu-icon"></i>
+              <span class="menu-title">Healthcenter</span>
+              <i class="menu-arrow"></i>
+            </a>
+          <li class="nav-item">
+            <a class="nav-link" data-toggle="collapse" href="viewhealthcenter.php" aria-expanded="false" aria-controls="icons">
               <i class="icon-contract menu-icon"></i>
-              <span class="menu-title">View healthcenter</span>
+              <span class="menu-title">View Healthcenter</span>
               <i class="menu-arrow"></i>
             </a>
             <div class="collapse" id="icons">
@@ -345,13 +344,13 @@
           <li class="nav-item">
             <a class="nav-link" data-toggle="collapse" href="schedule.php" aria-expanded="false" aria-controls="auth">
               <i class="icon-head menu-icon"></i>
-              <span class="menu-title">schedule vaccine</span>
+              <span class="menu-title">Schedule Vaccine</span>
               <i class="menu-arrow"></i>
             </a>
             <li class="nav-item">
             <a class="nav-link" data-toggle="collapse" href="viewschedule.php" aria-expanded="false" aria-controls="auth">
               <i class="icon-head menu-icon"></i>
-              <span class="menu-title">view schedule</span>
+              <span class="menu-title">View Schedule</span>
               <i class="menu-arrow"></i>
             </a>
             <div class="collapse" id="auth">

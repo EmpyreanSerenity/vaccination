@@ -11,7 +11,7 @@ $elements=array(
 
 	$form = new FormAssist($elements,$_POST);
 
-$labels=array('vname'=>"Vaccination name","vage"=>" Vaccination age");
+$labels=array('vname'=>"Vaccination name","vage"=>" Age Requirements");
 $rules=array(
     "vname"=>array("required"=>true,"minlength"=>1,"maxlength"=>20,),
     "vage"=>array("required"=>true,"minlength"=>1,"maxlength"=>20,),
@@ -76,7 +76,7 @@ $data=array(
  
 <div class="row">
                     <div class="col-md-6">
-Name:
+Vaccination Name:
 
 <?= $form->textBox('vname',array('class'=>'form-control')); ?>
 <?= $validator->error('vname'); ?>
@@ -86,7 +86,7 @@ Name:
 
 <div class="row">
                     <div class="col-md-6">
-Age:
+Age Requirements:
 
 <?= $form->textBox('vage',array('class'=>'form-control')); ?>
 <?= $validator->error('vage'); ?>
@@ -95,7 +95,7 @@ Age:
 </div>
 <div class="row">
                     <div class="col-md-6">
-IMAGE:
+Vaccination Image:
 
 
 <?= $form->fileField('vimage',array('class'=>'form-control')); ?>

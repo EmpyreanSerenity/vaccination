@@ -66,7 +66,7 @@ echo $file->errors();
 
 <div class="row">
                     <div class="col-md-6">
-Healthcenter name:
+Healthcenter Name:
 
 <?= $form->textBox('hname',array('class'=>'form-control')); ?>
 <?= $validator->error('hname'); ?>
@@ -75,7 +75,7 @@ Healthcenter name:
 </div>
 <div class="row">
                     <div class="col-md-6">
-Healthcenter region:
+Healthcenter Region:
 
 <?= $form->textBox('hregion',array('class'=>'form-control')); ?>
 <?= $validator->error('hregion'); ?>
@@ -84,7 +84,7 @@ Healthcenter region:
 </div>
 <div class="row">
                     <div class="col-md-6">
-IMAGE:
+Healthcenter Image:
 
 <?= $form->fileField('himage',array('class'=>'form-control')); ?>
 <span style="color:red;"><?= $validator->error('himage'); ?></span>

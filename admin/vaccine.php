@@ -10,7 +10,7 @@ $elements=array(
 $form=new FormAssist($elements,$_POST);
 
 $dao=new DataAccess();
-$labels=array('vname'=>"Vaccination name",'vage'=>" Vaccination age",'vimage'=>"Vaccination image");
+$labels=array('vname'=>"Vaccination name",'vage'=>" Age Requirements",'vimage'=>"Vaccination image");
 
 $rules=array(
     "vname"=>array("required"=>true,"minlength"=>1,"maxlength"=>20,),
@@ -27,7 +27,7 @@ if(isset($_POST["insert"]))
 if($validator->validate($_POST))
 {
 	
-    if($fileName=$file->doUploadRandom($_FILES['image'],array('.jpg','.png','.jpeg','.jfif','.webp','.pdf'),100000,1,'../upload'))
+    if($fileName=$file->doUploadRandom($_FILES['vimage'],array('.jpg','.png','.jpeg','.jfif','.webp','.pdf'),100000,1,'../upload'))
     {
 
 $data=array(
@@ -75,7 +75,7 @@ Vaccination name:
 </div>
 <div class="row">
                     <div class="col-md-6">
-vaccination Age:
+Age Requirements:
 
 <?= $form->textBox('vage',array('class'=>'form-control')); ?>
 <?= $validator->error('vage'); ?>
@@ -84,7 +84,7 @@ vaccination Age:
 </div>
 <div class="row">
                     <div class="col-md-6">
-IMAGE:
+Vaccination Image:
 
 <?= $form->fileField('vimage',array('class'=>'form-control')); ?>
 <span style="color:red;"><?= $validator->error('vimage'); ?></span>

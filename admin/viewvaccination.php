@@ -19,8 +19,8 @@ $dao=new DataAccess();
                         
                         <th>Id</th>
                         <th>Vaccination name</th>
-                        <th>Vaccination Age</th>
-                        <th>Image</th>
+                        <th>Age Requirements</th>
+                        <th>Vaccination Image</th>
                         <th>EDIT/DELETE</th>
                      
                       
@@ -30,7 +30,7 @@ $dao=new DataAccess();
     $actions=array(
     'edit'=>array('label'=>'Edit','link'=>'editvaccine.php','params'=>array('id'=>'vid'),'attributes'=>array('class'=>'btn btn-success')),
     
-    'delete'=>array('label'=>'Delete','link'=>'deleteva.php','params'=>array('id'=>'vid'),'attributes'=>array('class'=>'btn btn-success'))
+    'delete'=>array('label'=>'Delete','link'=>'deletevaccine.php','params'=>array('id'=>'vid'),'attributes'=>array('class'=>'btn btn-success'))
     
     );
 
@@ -38,7 +38,7 @@ $dao=new DataAccess();
         'srno'=>true,
         'hiddenfields'=>array('vid'),
         'actions_td'=>false,
-         'vimages'=>array(
+        'vimages'=>array(
                         'field'=>'vimage',
                         'path'=>'../uploads/',
                         'attributes'=>array('style'=>'width:100px;'))
@@ -51,7 +51,7 @@ $dao=new DataAccess();
     );
      $fields=array('vid','vname','vage','vimage');
 
-    $users=$dao->selectAsTable($fields,'vaccine','flage=1',$join,$actions,$config);
+    $users=$dao->selectAsTable($fields,'vaccine','status=1',$join,$actions,$config);
     
     echo $users;
                     
