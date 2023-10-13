@@ -22,7 +22,7 @@
 								<ul class="arrow-list">
 									<li ><a href="addchild.php"  style="color:white">Register child/children</a></li> 
 									<li><a href="#" style="color:white">Search Healthcenters</a></li>
-									<li><a href="displayvacc.php" style="color:white">Book vaccination slot</a></li> 
+									<li><a href="displayvaccine.php" style="color:white">Book vaccination slot</a></li> 
 									<li><a href="#" style="color:white">Download digital certificate</a></li>
 									
 								</ul>

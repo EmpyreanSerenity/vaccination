@@ -51,7 +51,7 @@ $a=$_SESSION['email'];
 								<li class="menu-item"><a href="profile.php"><?php echo $a ?> </a></li>
 								<li class="menu-item"><a href="addchild.php">Add Child </a></li>
 								<li class="menu-item"><a href="viewchilds.php">My Child </a></li>
-								<li class="menu-item"><a href="displayvacc.php">Vaccines</a></li>
+								<li class="menu-item"><a href="displayvaccine.php">Vaccines</a></li>
 								
 	                            <li class="menu-item"><a href="viewbooking1.php">View Bookings</a></li>
 								<li class="menu-item"><a href="plogout.php">Logout</a></li>
