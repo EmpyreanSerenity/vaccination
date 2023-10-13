@@ -52,7 +52,7 @@
 							<div class="col-md-3">
 								<div class="post">
 									<figure class="featured-image"><img src="images/vaccine_index.jpeg" style="width: 250px; height: 175px "alt=""></figure>
-									<h2 class="entry-title" style="color: lightskyblue"><a href="availablevaccine.php">Provided vaccines</a></h2>
+									<h2 class="entry-title" style="color: lightskyblue"><a href="displayvaccine.php">Provided vaccines</a></h2>
 									<p style="color: black">Get to know about the vaccines we provide at the healthcentres for your child.</p>
 								</div>
 							</div>
@@ -67,7 +67,7 @@
 							<div class="col-md-3">
 								<div class="post">
 									<figure class="featured-image"><img src="images/booking1.jpg" style="width: 250px; height: 175px "alt=""></figure>
-									<h2 class="entry-title" style="color: lightskyblue"><a href="displayvacc.php">Book vaccine</a></h2>
+									<h2 class="entry-title" style="color: lightskyblue"><a href="displayvaccine.php">Book vaccine</a></h2>
 									<p style=" color: black">Register and login to book the vaccination slot from your preferred healthcenter.</p>
 								</div>
 							</div>

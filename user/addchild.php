@@ -56,7 +56,7 @@ if(isset($_POST["submit"]))
 			if($dao->insert($data,"child"))
 			{
 			echo "<script> alert('Registeration Sucess');</script> ";
-            echo"<script> location.replace('displayvacc.php'); </script>";
+            echo"<script> location.replace('displayvaccine.php'); </script>";
 			}
 			else
 			{

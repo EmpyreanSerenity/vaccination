@@ -2,19 +2,19 @@
 <?php// include('header.php'); ?>   ?>
 <?php
 $dao=new DataAccess();
+$labels=array('pname'=>"Parent Name",'phone'=>"Phone","username"=>"Username","password"=>"Password",);
 $rules=array(
 	'pname'=>array('required'=>true),
-    'phno'=>array('required'=>true),
+    'phone'=>array('required'=>true),
     'username'=>array('required'=>true),
     'password'=>array('required'=>true),
 	
 );
-$labels=array('pname'=>"Parent Name",'phno'=>"Phone","username"=>"Username","password"=>"Password",);
 $validator=new FormValidator($rules);
 $elements=array(
 
     'pname' =>'',
-    'phno' =>'',
+    'phone' =>'',
 	'username'=>'',
 	'password' =>'',
     
@@ -30,7 +30,7 @@ if(isset($_POST['signup']))
 	{
 	$data=array(
         'pname'=>$_POST['pname'],
-        'phno'=>$_POST['phno'],
+        'phone'=>$_POST['phone'],
 		'username'=>$_POST['username'],
 		'password'=>$_POST['password'],
   
@@ -81,9 +81,9 @@ if(isset($_POST['signup']))
 			<?php echo $validator->error('pname') ?>
                             </div>
                             <div class="form-group">
-                               <!-- <label for="phno"><i class="zmdi zmdi-account material-icons-phno"></i></label>
-                                <input type="text" name="phno" id="phno" placeholder="Phone Number"/>--><h5>PHONE NUMBER:<?php echo $form->textBox('phno'); ?> </h5>
-			<?php echo $validator->error('phno') ?>
+                               <!-- <label for="phone"><i class="zmdi zmdi-account material-icons-phone"></i></label>
+                                <input type="text" name="phone" id="phone" placeholder="Phone Number"/>--><h5>PHONE NUMBER:<?php echo $form->textBox('phone'); ?> </h5>
+			<?php echo $validator->error('phone') ?>
                             </div>
                             <div class="form-group">
                                <!-- <label for="email"><i class="zmdi zmdi-email"></i></label>
@@ -142,11 +142,11 @@ if(isset($_POST['signup']))
            
 			<tr><h1>REGISTER DETAILS</h1></tr>
             <tr>
-			<td><h4>PARENT NAME:<?php echo $form->textBox('phno'); ?> </h4><br/></td>
-			<td><?php echo $validator->error('phno') ?></td>
+			<td><h4>PARENT NAME:<?php echo $form->textBox('phone'); ?> </h4><br/></td>
+			<td><?php echo $validator->error('phone') ?></td>
 			</tr>
             <tr>
-			<td><h4>PHONE NUMBER:<?php echo $form->textBox('phno'); ?> </h4><br/></td>
+			<td><h4>PHONE NUMBER:<?php echo $form->textBox('phone'); ?> </h4><br/></td>
 			<td><?php echo $validator->error('username') ?></td>
 			</tr>
 			<tr>
