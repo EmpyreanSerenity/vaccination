@@ -1,6 +1,6 @@
 
 <?php require('../config/autoload.php'); ?>
-<?php include("header.php");	?>
+<?php include("header2.php");	?>
 
 
 
@@ -12,7 +12,7 @@ $dao=new DataAccess();
 
 ?>
 <?php    
-$_SESSION['did']=$_GET['id']; 
+//$_SESSION['did']=$_GET['id']; 
 if(isset($_SESSION['email']))
 { 
 
@@ -52,10 +52,10 @@ if(isset($_SESSION['email']))
 							 $_SESSION['dob']=$months;
 							
 							
-							 $hid=$_GET['id']; 
+							 //$hid=$_GET['id']; 
 							 //echo $_SESSION['vid'];
 							 //echo $_SESSION['did'] ;
-							 $q="SELECT * from health where hid in (SELECT hid from schedule where vid=" .$_SESSION['vid']." and did =" .$_SESSION['did']. " and s_status=1)";
+							 $q="SELECT * from healthcenter";
 				
 $info=$dao->query($q);
 //print_r($info);
@@ -77,7 +77,7 @@ $info=$dao->query($q);
 								<div class="checked-box">
                               <h3 class="project-title" style="color: black"></h3> 
 								<a href="selectchild.php?id=<?= $info[$i]["hid"]?> ">
-								<img style="width:300; height:300" src=<?php echo BASE_URL."upload/".$info[$i]["himage"]; ?> alt=" " class="img-responsive" />
+								<img style="width:200 ; height:200 " src=<?php echo BASE_URL."upload/".$info[$i]["himage"]; ?> alt=" " class="img-responsive" />
 								<h3><?php echo $info[$i]["hname"]?></h3></a>	
 
 								
