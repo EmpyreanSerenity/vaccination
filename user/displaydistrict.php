@@ -65,7 +65,7 @@ $info=$dao->query($q);
 								<div class="checked-box">
                               <h3 class="project-title" style="color: black"></h3>
 							  
-								<a href="displayhealths.php?id=<?= $info[$i]["did"]?> ">
+								<a href="displayhealthcenter.php?id=<?= $info[$i]["did"]?> ">
 								<h2><?php echo $info[$i]["dname"]?></h2></a>	
 								
 							</div>

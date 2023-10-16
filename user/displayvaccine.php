@@ -1,6 +1,6 @@
 
 <?php require('../config/autoload.php'); ?>
-<?php include("header1.php");	?>
+<?php include("header2.php");	?>
 
 
 
@@ -24,7 +24,7 @@ if(isset($_SESSION['email']))
 
      <div class="page-head"  data-bg-image="images/abstract.jpg">
 		   <div class="container">
-				 <h2 class="page-title" style="color: white">Select Vaccine</h2>
+				 <h2 class="page-title" style="color: white">Available Vaccines</h2>
 			   <p style="color: white">Choose the vaccine according to your convenience</p>
 	       </div>
       </div>
@@ -68,7 +68,7 @@ $info=$dao->query($q);
                               <h3 class="project-title" style="color: black"></h3> 
 							  
 								<a href="displaydistrict.php?id=<?= $info[$i]["vid"]?> ">
-								<img style="width:250; height:250" src=<?php echo BASE_URL."upload/".$info[$i]["vimage"]; ?> alt=" " class="img-responsive" />
+								<img style="width:250; height:250" src="<?php echo "../upload/".$info[$i]["vimage"]; ?>" alt=" " class="img-responsive" />
 								<h2><?php echo $info[$i]["vname"]?></h2></a>
 								<h2><?php echo $info[$i]["vage"]?></h2></a>	
 

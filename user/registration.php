@@ -2,22 +2,21 @@
 <?php// include('header.php'); ?>   ?>
 <?php
 $dao=new DataAccess();
+$labels=array('pname'=>"Parent Name","username"=>"Username","password"=>"Password",'phone'=>"Phone",);
 $rules=array(
 	'pname'=>array('required'=>true),
-    'phno'=>array('required'=>true),
     'username'=>array('required'=>true),
     'password'=>array('required'=>true),
+    'phone'=>array('required'=>true),
 	
 );
-$labels=array('pname'=>"Parent Name",'phno'=>"Phone","username"=>"Username","password"=>"Password",);
 $validator=new FormValidator($rules);
 $elements=array(
 
     'pname' =>'',
-    'phno' =>'',
 	'username'=>'',
 	'password' =>'',
-    
+    'phone' =>'',
    
     
 	);
@@ -30,9 +29,9 @@ if(isset($_POST['signup']))
 	{
 	$data=array(
         'pname'=>$_POST['pname'],
-        'phno'=>$_POST['phno'],
 		'username'=>$_POST['username'],
 		'password'=>$_POST['password'],
+        'phone'=>$_POST['phone'],
   
 		);
 		$table='registration';
@@ -81,11 +80,6 @@ if(isset($_POST['signup']))
 			<?php echo $validator->error('pname') ?>
                             </div>
                             <div class="form-group">
-                               <!-- <label for="phno"><i class="zmdi zmdi-account material-icons-phno"></i></label>
-                                <input type="text" name="phno" id="phno" placeholder="Phone Number"/>--><h5>PHONE NUMBER:<?php echo $form->textBox('phno'); ?> </h5>
-			<?php echo $validator->error('phno') ?>
-                            </div>
-                            <div class="form-group">
                                <!-- <label for="email"><i class="zmdi zmdi-email"></i></label>
                                 <input type="email" name="email" id="email" placeholder="Your Email"/>--><h5>USER NAME:<?php echo $form->textBox('username'); ?> </h5>
 			<?php echo $validator->error('username') ?>
@@ -94,6 +88,11 @@ if(isset($_POST['signup']))
                                <!-- <label for="pass"><i class="zmdi zmdi-lock"></i></label>
                                 <input type="password" name="pass" id="pass" placeholder="Password"/>--><h5>PASSWORD:<?php echo $form->passwordBox ('password'); ?></h4>
 			<?php echo $validator->error('password') ?>
+                            </div>
+                            <div class="form-group">
+                               <!-- <label for="phone"><i class="zmdi zmdi-account material-icons-phone"></i></label>
+                                <input type="text" name="phone" id="phone" placeholder="Phone Number"/>--><h5>PHONE NUMBER:<?php echo $form->textBox('phone'); ?> </h5>
+			<?php echo $validator->error('phone') ?>
                             </div>
                            <!-- <div class="form-group">
                                 <label for="re-pass"><i class="zmdi zmdi-lock-outline"></i></label>
@@ -142,12 +141,12 @@ if(isset($_POST['signup']))
            
 			<tr><h1>REGISTER DETAILS</h1></tr>
             <tr>
-			<td><h4>PARENT NAME:<?php echo $form->textBox('phno'); ?> </h4><br/></td>
-			<td><?php echo $validator->error('phno') ?></td>
+			<td><h4>PARENT NAME:<?php echo $form->textBox('pname'); ?> </h4><br/></td>
+			<td><?php echo $validator->error('pname') ?></td>
 			</tr>
             <tr>
-			<td><h4>PHONE NUMBER:<?php echo $form->textBox('phno'); ?> </h4><br/></td>
-			<td><?php echo $validator->error('username') ?></td>
+			<td><h4>PHONE NUMBER:<?php echo $form->textBox('phone'); ?> </h4><br/></td>
+			<td><?php echo $validator->error('phone') ?></td>
 			</tr>
 			<tr>
 			<td><h4>USER NAME:<?php echo $form->textBox('username'); ?> </h4><br/></td>

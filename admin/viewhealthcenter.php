@@ -71,5 +71,3 @@ $dao=new DataAccess();
         </div><!-- End row -->
     </div><!-- End container -->
     </div><!-- End container_gray_bg -->
-    
-    

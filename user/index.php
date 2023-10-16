@@ -45,7 +45,7 @@
 								<div class="col-md-3">
 								<div class="post">
 									<figure class="featured-image"><img src="images/keralahc.jpg" style="width: 250px; height: 175px " alt=""></figure>
-									<h2 class="entry-title" style="color: lightskyblue"><a href="#">Our Healthcenters</a></h2>
+									<h2 class="entry-title" style="color: lightskyblue"><a href="displayhealthcenter.php">Our Healthcenters</a></h2>
 									<p style="color: black">View the healthcenters that provides the immunisation service.</p>
 								</div>
 							</div>

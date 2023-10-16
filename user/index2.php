@@ -45,14 +45,14 @@
 								<div class="col-md-3">
 								<div class="post">
 									<figure class="featured-image"><img src="images/keralahc.jpg" style="width: 250px; height: 175px " alt=""></figure>
-									<h2 class="entry-title" style="color: lightskyblue"><a href="viewhealthcenter.php">Our Healthcenters</a></h2>
+									<h2 class="entry-title" style="color: lightskyblue"><a href="displayhealthcenter.php">Our Healthcenters</a></h2>
 									<p style="color: black">View the healthcenters that provides the immunisation service.</p>
 								</div>
 							</div>
 							<div class="col-md-3">
 								<div class="post">
 									<figure class="featured-image"><img src="images/vaccine_index.jpeg" style="width: 250px; height: 175px "alt=""></figure>
-									<h2 class="entry-title" style="color: lightskyblue"><a href="availablevaccine.php">Provided vaccines</a></h2>
+									<h2 class="entry-title" style="color: lightskyblue"><a href="displayvaccine.php">Provided vaccines</a></h2>
 									<p style="color: black">Get to know about the vaccines we provide at the healthcentres for your child.</p>
 								</div>
 							</div>

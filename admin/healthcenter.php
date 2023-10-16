@@ -24,7 +24,7 @@ if(isset($_POST["insert"]))
 
 if($validator->validate($_POST))
 {
-    if($fileName=$file->doUploadRandom($_FILES['image'],array('.jpg','.png','.jpeg','.jfif','.webp','.pdf'),100000,1,'../upload'))
+    if($fileName=$file->doUploadRandom($_FILES['himage'],array('.jpg','.png','.jpeg','.jfif','.webp','.pdf'),100000,1,'../upload'))
     {
 
 

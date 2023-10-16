@@ -353,6 +353,12 @@
               <span class="menu-title">View Schedule</span>
               <i class="menu-arrow"></i>
             </a>
+            <li class="nav-item">
+            <a class="nav-link" data-toggle="collapse" href="viewparents.php" aria-expanded="false" aria-controls="auth">
+              <i class="icon-head menu-icon"></i>
+              <span class="menu-title">View Parents</span>
+              <i class="menu-arrow"></i>
+            </a>
             <div class="collapse" id="auth">
               <ul class="nav flex-column sub-menu">
                 <li class="nav-item"> <a class="nav-link" href="pages/samples/login.html"> Login </a></li>
