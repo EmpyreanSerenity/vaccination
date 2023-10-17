@@ -86,6 +86,7 @@ $a=$_SESSION['email'];
 							<button class="menu-toggle"><i class="fa fa-bars"></i></button>
 							<ul class="menu">
 								<li class="home menu-item"><a href="index2.php"><img src="images/home-icon.png" alt="Home"></a></li>
+								<li class="menu-item"><a href="addchild.php">Add Child </a></li>
 								<li class="menu-item"><a href="contactus1.php">Contact us</a></li>
 								<li class="menu-item"><a href="index.php">Parent Logout</a></li>
 							
