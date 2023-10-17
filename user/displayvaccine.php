@@ -67,7 +67,7 @@ $info=$dao->query($q);
 								<div class="checked-box">
                               <h3 class="project-title" style="color: black"></h3> 
 							  
-								<a href="displaydistrict.php?id=<?= $info[$i]["vid"]?> ">
+								<a href="displayhealthcenter.php ">
 								<img style="width:250; height:250" src="<?php echo "../upload/".$info[$i]["vimage"]; ?>" alt=" " class="img-responsive" />
 								<h2><?php echo $info[$i]["vname"]?></h2></a>
 								<h2><?php echo $info[$i]["vage"]?></h2></a>	
