@@ -88,8 +88,8 @@ $a=$_SESSION['email'];
 								<li class="home menu-item"><a href="index.php"><img src="images/home-icon.png" alt="Home"></a></li>
 								<li class="menu-item"><a href="contactus1.php">Contact us</a></li>
 								<li class="menu-item"><a href="healthlogin.php">Healthworker</a></li>
-								<li class="menu-item"><a href="registration.php">Parent Register</a></li>
-								<li class="menu-item"><a href="login.php">Parent Login</a></li>
+								<li class="menu-item"><a href="registration.php">Register</a></li>
+								<li class="menu-item"><a href="login.php">Login</a></li>
 							
 							</ul>
 						</nav>
