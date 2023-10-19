@@ -38,9 +38,9 @@ $dao=new DataAccess();
         'srno'=>true,
         'hiddenfields'=>array('hid'),
         'actions_td'=>false,
-        'himages'=>array(
+        'images'=>array(
                         'field'=>'himage',
-                        'path'=>'../uploads/',
+                        'path'=>'../upload/',
                         'attributes'=>array('style'=>'width:100px;'))
         
         
