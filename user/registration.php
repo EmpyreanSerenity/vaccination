@@ -1,5 +1,5 @@
 <?php require('../config/autoload.php'); ?>
-<?php// include('header.php'); ?>   ?>
+<?php //include('header.php'); ?> 
 <?php
 $dao=new DataAccess();
 $labels=array('pname'=>"Parent Name","username"=>"Username","password"=>"Password",'phone'=>"Phone",);
