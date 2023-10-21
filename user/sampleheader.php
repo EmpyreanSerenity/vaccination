@@ -36,10 +36,10 @@ $b=$_SESSION['pid'];
             <div class="container">
                 <div class="header-bar">
                     <a href="" class="branding">
-                        <img src="images/bluevaccine.jpg" alt="" class="logo">
+                        <img src="images/childvaccinelogo.png" alt="" class="logo">
                         <div class="logo-type">
-                            <h1 class="site-title">Immunisation Drive</h1>
-                            <small class="site-description">Immunise and boost up!</small>
+                            <h1 class="site-title">ChildHealthKerala</h1>
+                            <small class="site-description">Protecting Kerala's Future !</small>
                         </div>
                     </a>
 

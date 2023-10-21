@@ -23,7 +23,7 @@ if(isset($_SESSION['email']))
 
 <?php } ?>
 
-     <div class="page-head"  data-bg-image="images/abstract.jpg">
+     <div class="page-head"  data-bg-image="images/5570834.jpg">
 		   <div class="container">
 				 <h2 class="page-title" style="color: white">Select District</h2>
 			   <p style="color: white">Choose the district of the healthcenter according to your convenience</p>

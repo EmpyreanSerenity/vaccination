@@ -1,6 +1,6 @@
 
 <?php require('../config/autoload.php'); ?>
-<?php include("header2.php");	?>
+<?php include("header.php");	?>
 
 
 
@@ -22,7 +22,7 @@ if(isset($_SESSION['email']))
 
 <?php } ?>
 
-     <div class="page-head"  data-bg-image="images/abstract.jpg">
+     <div class="page-head"  data-bg-image="images/5570834.jpg">
 		   <div class="container">
 				 <h2 class="page-title" style="color: white">Available Vaccines</h2>
 			   <p style="color: white">Choose the vaccine according to your convenience</p>
@@ -85,4 +85,4 @@ $info=$dao->query($q);
 	</div>
 	
 	
-		<?php include("footer2.php");	?>
+		<?php include("footer.php");	?>

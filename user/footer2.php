@@ -4,12 +4,12 @@
 
 	
 
-			<footer class="site-footer" data-bg-image="images/abstract_blur.jpg">
+			<footer class="site-footer" data-bg-image="images/abstarct_blur.jpg">
 				<div class="container">
 					<div class="row">
 						<div class="col-md-3">
 							<div class="widget"  style="color: white">
-								<h3 class="widget-title">Contact info</h3>
+								<h3 class="widget-title"><strong>Contact info</strong></h3>
 								<p>Immunsation drive program, Head Office</p>
 								<address> Kalamassery, Kochi</address>
 								<a href="tel:++9178236607882">+917823660788</a> <br>
@@ -52,7 +52,7 @@
 						</div>
 					</div> <!-- .row -->
 
-					<p class="colophon" style="color: white">Copyright 2021 Immunisation Drive name. Designed by <a href="http://www.vandelaydesign.com/" title="Designed by VandelayDesign.com" target="_blank">VandelayDesign.com</a>. All rights reserved</p>
+					<p class="colophon" style="color: white">Copyright 2021 ChildHealthKerala name. Designed by <a href="http://www.vandelaydesign.com/" title="Designed by VandelayDesign.com" target="_blank">VandelayDesign.com</a>. All rights reserved</p>
 				</div> <!-- .container -->
 			</footer>
 		</div>
