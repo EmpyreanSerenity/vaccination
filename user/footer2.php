@@ -4,7 +4,7 @@
 
 	
 
-			<footer class="site-footer" data-bg-image="images/abstarct_blur.jpg">
+			<footer class="site-footer" data-bg-image="images/5570834.jpg">
 				<div class="container">
 					<div class="row">
 						<div class="col-md-3">

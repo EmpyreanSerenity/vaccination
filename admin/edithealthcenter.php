@@ -7,15 +7,15 @@ $dao=new DataAccess();
 $info=$dao->getData('*','healthcenter','hid='.$_GET['id']);
 $file=new FileUpload();
 $elements=array(
-        "hname"=>$info[0]['hname'],"hregion"=>$info[0]['hregion'],"himage"=>"");
+        "hname"=>$info[0]['hname'],"hregion"=>$info[0]['hregion'],"himage"=>"","description"=>$info[0]['description']);
 
 	$form = new FormAssist($elements,$_POST);
 
-$labels=array('hname'=>"healthcenter name",'hregion'=>"healthcenter region");
+$labels=array('hname'=>"healthcenter name",'hregion'=>"healthcenter region",'description'=>"healthcenter description");
 $rules=array(
     "hname"=>array("required"=>true,"minlength"=>3,"maxlength"=>20,"alphaspaceonly"=>true),
     "hregion"=>array("required"=>true,"minlength"=>1,"maxlength"=>20,"alphaonly"=>true),
-    
+    "description"=>array("required"=>true),
      
 );
     
@@ -38,6 +38,7 @@ $data=array(
         'hname'=>$_POST['hname'],
         'hregion'=>$_POST['hregion'],
         'himage'=>$_POST['himage'],
+        'description'=>$_POST['description'],
     );
   $condition='hid='.$_GET['id'];
 
@@ -105,6 +106,15 @@ Healthcenter Image:
 
 <div class="row">
                     <div class="col-md-6">
+Healthcenter Description:
+
+<?= $form->textBox('description',array('class'=>'form-control')); ?>
+<?= $validator->error('description'); ?>
+
+</div>
+</div>
+
+
 
 <button type="submit" name="update"  >UPDATE</button>
 </form>

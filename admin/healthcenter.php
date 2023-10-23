@@ -5,15 +5,16 @@ include("header.php");
 
 $file=new FileUpload();
 $elements=array(
-        "hname"=>"","hregion"=>"","himage"=>"");
+        "hname"=>"","hregion"=>"","himage"=>"","description"=>"");
 $form=new FormAssist($elements,$_POST);
 $dao=new DataAccess();
-$labels=array('hname'=>"healthcenter name",'hregion'=>"healthcenter region",'himage'=>"healthcenter image");
+$labels=array('hname'=>"healthcenter name",'hregion'=>"healthcenter region",'himage'=>"healthcenter image",'description'=>"healthcenter description");
 
 $rules=array(
     "hname"=>array("required"=>true,"minlength"=>3,"maxlength"=>30,"alphaspaceonly"=>true),
     "hregion"=>array("required"=>true,"minlength"=>1,"maxlength"=>20,"alphaonly"=>true),
     "himage"=> array('filerequired'=>true),
+    "description"=>array("required"=>true),
 );
     
     
@@ -34,7 +35,7 @@ $data=array(
         'hname'=>$_POST['hname'],
         'hregion'=>$_POST['hregion'],
         'himage'=>$fileName,
-         
+        'description'=>$_POST['description'],         
     );
 
     print_r($data);
@@ -88,6 +89,15 @@ Healthcenter Image:
 
 <?= $form->fileField('himage',array('class'=>'form-control')); ?>
 <span style="color:red;"><?= $validator->error('himage'); ?></span>
+
+</div>
+</div>
+<div class="row">
+                    <div class="col-md-6">
+Healthcenter Description:
+
+<?= $form->textBox('description',array('class'=>'form-control')); ?>
+<?= $validator->error('description'); ?>
 
 </div>
 </div>

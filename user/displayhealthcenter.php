@@ -1,6 +1,6 @@
 
 <?php require('../config/autoload.php'); ?>
-<?php include("header.php");	?>
+<?php include("header2.php");	?>
 
 
 
@@ -73,15 +73,21 @@ $info=$dao->query($q);
 	
 		                 ?>
 							<div class="col-md-6">
-								<div class="checked-box">
-                              <h3 class="project-title" style="color: black"></h3> 
-								<a href="selectchild.php?id=<?= $info[$i]["hid"]?> ">
-								<img style="width:200 ; height:200 " src=<?php echo BASE_URL."upload/".$info[$i]["himage"]; ?> alt=" " class="img-responsive" />
-								<h3><?php echo $info[$i]["hname"]?></h3></a>
+  <div class="checked-box">
+    <h3 class="project-title" style="color: black"></h3>
+    <div class="health-center-info">
+      <a href="selectchild.php?id=<?= $info[$i]["hid"]?>">
+        <img style="width:200px; height:200px" src=<?php echo BASE_URL."upload/".$info[$i]["himage"]; ?> alt="Health Center Image" class="img-responsive" />
+      </a>
+	  <br></br>
+      <div class="health-center-details">
+        <h3><?php echo $info[$i]["hname"]?></h3>
+        <p><strong><?php echo $info[$i]["description"]?><s]</strong></p>
+      </div>
+    </div>
+  </div>
+</div>
 
-								
-							</div>
-						</div>
 				
 		
 				<?php 

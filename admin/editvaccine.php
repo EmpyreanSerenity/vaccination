@@ -7,15 +7,15 @@ $dao=new DataAccess();
 $info=$dao->getData('*','vaccine','vid='.$_GET['id']);
 $file=new FileUpload();
 $elements=array(
-        "vname"=>$info[0]['vname'],"vage"=>$info[0]['vage'],"vimage"=>"");
+        "vname"=>$info[0]['vname'],"vage"=>$info[0]['vage'],"vimage"=>"","description"=>$info[0]['description']);
 
 	$form = new FormAssist($elements,$_POST);
 
-$labels=array('vname'=>"Vaccination name","vage"=>" Age Requirements");
+$labels=array('vname'=>"Vaccination name","vage"=>" Age Requirements",'description'=>"vaccine description");
 $rules=array(
     "vname"=>array("required"=>true,"minlength"=>1,"maxlength"=>20,),
     "vage"=>array("required"=>true,"minlength"=>1,"maxlength"=>20,),
-    
+    "description"=>array("required"=>true),
 );
     
     
@@ -37,6 +37,7 @@ $data=array(
         'vname'=>$_POST['vname'],
         'vage'=>$_POST['vage'],
         'vimage'=>$_POST['vimage'],
+        'description'=>$_POST['description'],
     );
   $condition='vid='.$_GET['id'];
   if(isset($flag))
@@ -105,6 +106,13 @@ Vaccination Image:
 
 <div class="row">
                     <div class="col-md-6">
+Vaccine Description:
+
+<?= $form->textBox('description',array('class'=>'form-control')); ?>
+<?= $validator->error('description'); ?>
+
+</div>
+</div>
 
 
 

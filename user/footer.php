@@ -21,7 +21,7 @@
 								<h3 class="widget-title"><strong>VACCINATION SERVICES</strong></h3>
 								<ul class="arrow-list">
 									<li ><a href="login.php"  style="color:white">Register child/children</a></li> 
-									<li><a href="#" style="color:white">Search Healthcenters</a></li>
+									<li><a href="displayhealthcenter.php" style="color:white">Search Healthcenters</a></li>
 									<li><a href="login.php" style="color:white">Book vaccination slot</a></li> 
 									<li><a href="login.php" style="color:white">Download digital certificate</a></li>
 									

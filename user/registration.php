@@ -39,7 +39,8 @@ if(isset($_POST['signup']))
         {
         	//$msg="Registered successfully";
 		echo "<script> alert('New record created successfully');</script> ";
-		
+        header('Location: login.php');
+        exit;
 		}
 		
 		else
