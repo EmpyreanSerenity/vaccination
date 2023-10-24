@@ -1,19 +1,33 @@
-
 <!DOCTYPE html>
-
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Sign Up Form by Colorlib</title>
+    <title>Child Registration Form</title>
 
     <!-- Font Icon -->
     <link rel="stylesheet" href="fonts/material-icon/css/material-design-iconic-font.min.css">
     <link rel="stylesheet" href="vendor/jquery-ui/jquery-ui.min.css">
 
-    <!-- Main css -->
+    <!-- Main CSS -->
     <link rel="stylesheet" href="css/style.css">
+    <!-- Additional Custom CSS -->
+    <style>
+        body {
+            background-image: url('../upload/background.jpg'); /* Path to your background image */
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+        .signup-content {
+            background-color: rgba(255, 255, 255, 0.7); /* Semi-transparent white background */
+            padding: 20px;
+            border-radius: 10px;
+        }
+        .blur-background {
+            backdrop-filter: blur(5px); /* Adjust the blur level as needed */
+        }
+    </style>
 </head>
 <?php
 require('../config/autoload.php'); 
@@ -24,7 +38,7 @@ $elements=array(
 
 $form=new FormAssist($elements,$_POST);
 //$file=new FileUpload();
-$labels=array('pid'=>"Parent Id",'ch_firstname'=>"Child firstname",'ch_lastname'=>"child firstname",'gender'=>"Gender",'dob'=>"Date of Birth");
+$labels=array('pid'=>"Parent Id",'ch_firstname'=>"Child firstname",'ch_lastname'=>"child lastname",'gender'=>"Gender",'dob'=>"Date of Birth");
 
 $rules=array(
     
@@ -119,7 +133,7 @@ if(isset($_POST["submit"]))
                                 Female
                             <input class ="form-input"type="radio" id="gender" name="gender" value="f" required>
 
-                            <?= $validator->error('ch_firstname'); ?></span>
+                            <?= $validator->error('gender'); ?></span>
                             </div >    
                           
                         
