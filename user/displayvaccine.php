@@ -73,7 +73,6 @@ $info=$dao->query($q);
 	
 		                 ?>
 							<div class="col-md-6">
-  <div class="checked-box">
     <h3 class="project-title" style="color: black"></h3>
     <div class="vaccine-info">
       <a href="selectchild.php?id=<?= $info[$i]["vid"]?>">
@@ -85,7 +84,6 @@ $info=$dao->query($q);
         <p><strong><?php echo $info[$i]["description"]?><s]</strong></p>
       </div>
     </div>
-  </div>
 </div>
 
 				

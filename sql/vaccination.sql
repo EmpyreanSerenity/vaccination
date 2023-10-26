@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1:3306
--- Generation Time: Oct 23, 2023 at 05:00 PM
+-- Generation Time: Oct 26, 2023 at 01:04 PM
 -- Server version: 8.0.31
 -- PHP Version: 8.0.26
 
@@ -20,6 +20,23 @@ SET time_zone = "+00:00";
 --
 -- Database: `vaccination`
 --
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `child`
+--
+
+DROP TABLE IF EXISTS `child`;
+CREATE TABLE IF NOT EXISTS `child` (
+  `cid` int NOT NULL AUTO_INCREMENT,
+  `cfirstname` varchar(50) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL,
+  `clastname` varchar(50) NOT NULL,
+  `pid` int NOT NULL,
+  `gender` varchar(7) NOT NULL,
+  `dob` date NOT NULL,
+  PRIMARY KEY (`cid`)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 -- --------------------------------------------------------
 
@@ -43,8 +60,8 @@ CREATE TABLE IF NOT EXISTS `healthcenter` (
 --
 
 INSERT INTO `healthcenter` (`hid`, `hname`, `hregion`, `himage`, `description`, `status`) VALUES
-(1, 'General Hospital', 'Ernakulam', 'govtmedicalcollege.jpeg', 'General Hospital, Ernakulam is a state-owned hospital, with excellent super speciality facilities for training and treatment in cardiology, ctvs, nephrology, urology along with internal medicine, general surgery in Kochi, India. It is managed as part of the public health system of the government of Kerala. ', 1),
-(2, 'General Hospital', 'Ernakulam', 'govtmedicalcollege.jpeg', 'General Hospital, Ernakulam is a state-owned hospital, with excellent super speciality facilities for training and treatment in cardiology, ctvs, nephrology, urology along with internal medicine, general surgery in Kochi, India. It is managed as part of the public health system of the government of Kerala. ', 1);
+(1, 'General Hospital', 'Ernakulam', '0c16e69e8fd4edd1a2536052adf54b63_1199050a8bd4ea18196f.jpeg', 'General Hospital, Ernakulam is a state-owned hospital, with excellent super speciality facilities for training and treatment in cardiology, ctvs, nephrology, urology along with internal medicine, general surgery in Kochi, India. It is managed as part of the public health system of the government of Kerala. ', 1),
+(2, 'Medical College', 'Ernakulam', 'cityhospital.jpeg', 'Government Medical College, Ernakulam (GMCE) is one among the premier Medical Instutions in the Kerala State. The Medical College is later known as Cochin Medical College, Cochin was governed by the Co-operative Academy of Professional Education established by the Government of Kerala.', 2);
 
 -- --------------------------------------------------------
 
@@ -87,7 +104,7 @@ CREATE TABLE IF NOT EXISTS `schedule` (
   `quantity` int NOT NULL,
   `status` int NOT NULL DEFAULT '1',
   PRIMARY KEY (`sid`)
-) ENGINE=MyISAM AUTO_INCREMENT=5 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=MyISAM DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 -- --------------------------------------------------------
 
@@ -104,16 +121,14 @@ CREATE TABLE IF NOT EXISTS `vaccine` (
   `description` varchar(1000) NOT NULL,
   `status` int NOT NULL DEFAULT '1',
   PRIMARY KEY (`vid`)
-) ENGINE=MyISAM AUTO_INCREMENT=4 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=MyISAM AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 --
 -- Dumping data for table `vaccine`
 --
 
 INSERT INTO `vaccine` (`vid`, `vname`, `vage`, `vimage`, `description`, `status`) VALUES
-(1, 'Hepatitis B', 1, 'hepA.jpg', 'Hepatitis B is a vaccine-preventable liver infection caused by the hepatitis B virus (HBV) that can lead to chronic infection causing cirrhosis, liver cancer and death. All medically stable infants weighing ≥2,000 grams are recommended to receive the hepatitis B vaccine within the first 24 hours following birth.', 2),
-(2, 'Hepatitis B', 1, 'hepA.jpg', 'Hepatitis B is a vaccine-preventable liver infection caused by the hepatitis B virus (HBV) that can lead to chronic infection causing cirrhosis, liver cancer and death. All medically stable infants weighing ≥2,000 grams are recommended to receive the hepatitis B vaccine within the first 24 hours following birth.', 2),
-(3, 'Hepatitis A', 1, '1dcaf94d591ecf5aeb4a9787e7bbe454_9c72cd24bcaa97e.jpg', 'Hepatitis A is a vaccine-preventable liver infection caused by the hepatitis A virus (HAV). HAV is found in the stool and blood of people who are infected. Hepatitis A is very contagious.', 2);
+(1, 'Hepatitis A', 1, 'hepb.jpg', 'Hepatitis A is a vaccine-preventable liver infection caused by the hepatitis A virus (HAV). HAV is found in the stool and blood of people who are infected. Hepatitis A is very contagious.', 1);
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

@@ -4,7 +4,7 @@
 
 include("header.php");
 $dao=new DataAccess();
-$info=$dao->getData('*','vaccine','vid='.$_GET['id']);
+$info=$dao->getData('*','vaccine','vid='.$_GET['vid']);
 $file=new FileUpload();
 $elements=array(
         "vname"=>$info[0]['vname'],"vage"=>$info[0]['vage'],"vimage"=>"","description"=>$info[0]['description']);
@@ -39,7 +39,7 @@ $data=array(
         'vimage'=>$_POST['vimage'],
         'description'=>$_POST['description'],
     );
-  $condition='vid='.$_GET['id'];
+  $condition='vid='.$_GET['vid'];
   if(isset($flag))
   {	$data['vimage']=$fileName;
 

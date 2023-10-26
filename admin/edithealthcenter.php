@@ -4,7 +4,7 @@
 
 include("header.php");
 $dao=new DataAccess();
-$info=$dao->getData('*','healthcenter','hid='.$_GET['id']);
+$info=$dao->getData('*','healthcenter','hid='.$_GET['hid']);
 $file=new FileUpload();
 $elements=array(
         "hname"=>$info[0]['hname'],"hregion"=>$info[0]['hregion'],"himage"=>"","description"=>$info[0]['description']);
@@ -40,7 +40,7 @@ $data=array(
         'himage'=>$_POST['himage'],
         'description'=>$_POST['description'],
     );
-  $condition='hid='.$_GET['id'];
+  $condition='hid='.$_GET['hid'];
 
     if($dao->update($data,'healthcenter',$condition))
     {

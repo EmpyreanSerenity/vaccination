@@ -76,8 +76,8 @@ $dao=new DataAccess();
             echo "<td>" . $first5Words . "</td>";
             echo "<td>";
             // Render "Edit" and "Delete" buttons
-            echo "<a href='" . $actions['edit']['link'] . "?" . http_build_query($actions['edit']['params']) . "' class='" . $actions['edit']['attributes']['class'] . "'>" . $actions['edit']['label'] . "</a> ";
-            echo "<a href='" . $actions['delete']['link'] . "?" . http_build_query($actions['delete']['params']) . "' class='" . $actions['delete']['attributes']['class'] . "'>" . $actions['delete']['label'] . "</a>";
+            echo "<a class='btn btn-success' href='editvaccine.php?vid=" . $row[0] . "'>EDIT</a> ";
+            echo "<a class='btn btn-danger' href='deletevaccine.php?vid=" . $row[0] . "'>DELETE</a>";
             echo "</td>";
             echo "</tr>";
         }
