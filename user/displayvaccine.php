@@ -75,7 +75,7 @@ $info=$dao->query($q);
 							<div class="col-md-6">
     <h3 class="project-title" style="color: black"></h3>
     <div class="vaccine-info">
-      <a href="selectchild.php?id=<?= $info[$i]["vid"]?>">
+      <!--<a href="selectchild.php?id=<?= $info[$i]["vid"]?>">-->
         <img style="width:200px; height:200px" src=<?php echo BASE_URL."upload/".$info[$i]["vimage"]; ?> alt="Vaccine Image" class="img-responsive" />
       </a>
 	  <br></br>

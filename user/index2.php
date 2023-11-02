@@ -56,14 +56,7 @@
 									<p style="color: black">Get to know about the vaccines we provide at the healthcentres for your child.</p>
 								</div>
 							</div>
-						
-							<div class="col-md-3">
-								<div class="post">
-									<figure class="featured-image"><img src="images/child_immunisation.jpg" style="width: 250px; height: 175px "alt=""></figure>
-									<h2 class="entry-title" style="color: lightskyblue"><a href="viewavailable.php">Slot availability</a></h2>
-									<p style=" color: black">Navigate through the pages to check the availability of vaccines and slots at each healthcenter. </p>
-								</div>
-							</div>
+					
 							<div class="col-md-3">
 								<div class="post">
 									<figure class="featured-image"><img src="images/booking1.jpg" style="width: 250px; height: 175px "alt=""></figure>
@@ -75,14 +68,6 @@
 						</div> <!-- .row -->
 					</div> <!-- .container -->
 				</div> <!-- .fullwidth-block -->
-
-
-				
-
-				
-
-		
-		
 	</body>
 			<?php
 

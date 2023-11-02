@@ -1,0 +1,13 @@
+ table tr th { text-align:center;
+ }
+
+ table td { text-align:center;
+min-width: 120px;
+max-width: 300px;
+min-height: 80px;
+width:auto;
+
+
+
+
+ }

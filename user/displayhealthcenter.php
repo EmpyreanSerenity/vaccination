@@ -75,7 +75,7 @@ $info=$dao->query($q);
 							<div class="col-md-6">
     <h3 class="project-title" style="color: black"></h3>
     <div class="health-center-info">
-      <a href="selectchild.php?id=<?= $info[$i]["hid"]?>">
+      <!--<a href="selectchild.php?id=<?= $info[$i]["hid"]?>">-->
         <img style="width:200px; height:200px" src=<?php echo BASE_URL."upload/".$info[$i]["himage"]; ?> alt="Health Center Image" class="img-responsive" />
       </a>
 	  <br></br>
