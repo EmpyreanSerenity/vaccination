@@ -8,7 +8,7 @@ div.a {
 }
 </style>
 
-   <div class="page-head"  data-bg-image="images/abstract.jpg">
+   <div class="page-head"  data-bg-image="images/5570834.jpg">
 		   <div class="container">
 				 <h2 class="page-title" style="color: white">Select District</h2>
 			   <p style="color: white">Choose the district of the healthcenter according to your convenience</p>
@@ -24,17 +24,17 @@ if(isset($_SESSION['email']))
 <?php
 $dao=new DataAccess();
 $elements=array(
-        "pid"=>"","ch_firstname"=>"","ch_lastname"=>"","gender"=>"","dob"=>"");
+        "pid"=>"","cfirstname"=>"","clastname"=>"","gender"=>"","dob"=>"");
 
 
 $form=new FormAssist($elements,$_POST);
 //$file=new FileUpload();
-$labels=array('pid'=>"Parent Id",'ch_firstname'=>"Child firstname",'ch_lastname'=>"child firstname",'gender'=>"Gender",'dob'=>"Date of Birth");
+$labels=array('pid'=>"Parent Id",'cfirstname'=>"Child firstname",'clastname'=>"child firstname",'gender'=>"Gender",'dob'=>"Date of Birth");
 
 $rules=array(
     "pid"=>array("required"=>true,"minlength"=>1,"maxlength"=>20),
-	 "ch_firstname"=>array("required"=>true,"alphaonly"=>true),
-    "ch_lastname"=>array("required"=>true,"alphaonly"=>true),     
+	 "cfirstname"=>array("required"=>true,"alphaonly"=>true),
+    "clastname"=>array("required"=>true,"alphaonly"=>true),     
     "gender"=>array("required"=>true),
     "dob"=>array("required"=>true)
     
@@ -49,8 +49,8 @@ if(isset($_POST["submit"]))
 		{
         $data=array(
 				'pid'=>$_SESSION['pid'],
-                'ch_firstname'=>$_POST['ch_firstname'],
-				'ch_lastname'=>$_POST['ch_lastname'],
+                'cfirstname'=>$_POST['cfirstname'],
+				'clastname'=>$_POST['clastname'],
 				'gender'=>$_POST['gender'],
                 'dob'=>$_POST['dob']
                 
@@ -83,8 +83,8 @@ if(isset($_POST["submit"]))
                     <div class="col-md-6">
                      Child Firstname:
 
-                     <?= $form->textBox('ch_firstname',array('class'=>'form-control')); ?>
-                     <?= $validator->error('ch_firstname'); ?>
+                     <?= $form->textBox('cfirstname',array('class'=>'form-control')); ?>
+                     <?= $validator->error('cfirstname'); ?>
 
                     </div>
             </div>
@@ -94,8 +94,8 @@ if(isset($_POST["submit"]))
                     <div class="col-md-6">
                      Child Lastname:
 
-                     <?= $form->textBox('ch_lastname',array('class'=>'form-control')); ?>
-                     <?= $validator->error('ch_lastname'); ?>
+                     <?= $form->textBox('clastname',array('class'=>'form-control')); ?>
+                     <?= $validator->error('clastname'); ?>
 
                     </div>
             </div>

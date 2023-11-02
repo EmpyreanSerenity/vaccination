@@ -10,7 +10,7 @@ div.a {
 <?php
 $dao=new DataAccess();
 ?>
-  <div class="page-head"  data-bg-image="images/abstract.jpg">
+  <div class="page-head"  data-bg-image="images/5570834.jpg">
 		   <div class="container">
 				 <h2 class="page-title" style="color: white">View your child details</h2>
 	       </div>
@@ -26,8 +26,8 @@ if(isset($_SESSION['email']))
 						<div class="row">
             <?php
 							
-					$_SESSION['parent_id']	=$_SESSION['pid'];
-					$pid=$_SESSION['parent_id'];
+					$_SESSION['pid']	=$_SESSION['pid'];
+					$pid=$_SESSION['pid'];
 			 $q="select * from child c where pid=".$pid. "";
              $_SESSION['hid']=$_GET['id'];
 
@@ -44,14 +44,14 @@ $info=$dao->query($q);
 				 <div class="col-md-6">
 				 <div class="boxed-icon">
 							<img src="images/boy.jpg" alt="" class="icon" style="width:100px; height:100px;">
-                              <h3 style="color: black"><?php echo $info[$i]["ch_firstname"]?> <?php echo $info[$i]["ch_lastname"]?></h3> 
+                              <h3 style="color: black"><?php echo $info[$i]["cfirstname"]?> <?php echo $info[$i]["clastname"]?></h3> 
 					         <table style="color: black;"> 
 					        <tr><td><b>DOB:</b></td><td> <?php echo $info[$i]["dob"]?></td></tr>
 							<tr><td><br></td></tr>
 						 <tr><td><b>Sex:</b></td><td><div class="a"><?php echo $info[$i]["gender"]?></td></tr>
 				             <tr><td><br></td></tr>
 							</table>
-						      <a href="booking.php?id=<?= $info[$i]["ch_id"];?>" class="button" style="background-color: lightskyblue ;color: black" >select</a>
+						      <a href="booking.php?id=<?= $info[$i]["cid"];?>" class="button" style="background-color: lightskyblue ;color: black" >select</a>
 					         
 							</div>
 						</div>
@@ -65,14 +65,14 @@ $info=$dao->query($q);
 					 <div class="col-md-6">
 				 <div class="boxed-icon">
 							<img src="images/girl.jpg" alt="" class="icon" style="width:100px; height:100px;">
-                              <h3 style="color: black"><?php echo $info[$i]["ch_firstname"]?> <?php echo $info[$i]["ch_lastname"]?></h3> 
+                              <h3 style="color: black"><?php echo $info[$i]["cfirstname"]?> <?php echo $info[$i]["clastname"]?></h3> 
 							<table style="color: black;"> 
 					        <tr><td><b>DOB:</b></td><td> <?php echo $info[$i]["dob"]?></td></tr>
 							<tr><td><br></td></tr>
 						 <tr><td><b>Sex:</b></td><td><div class="a"> <?php echo $info[$i]["gender"]?></td></tr>
 				             <tr><td><br></td></tr>
 							</table>
-							 <a href="booking.php?id=<?= $info[$i]["ch_id"];?>" class="button" style="background-color: lightskyblue ;color: black" >select</a>
+							 <a href="booking.php?id=<?= $info[$i]["cid"];?>" class="button" style="background-color: lightskyblue ;color: black" >select</a>
 					         		
 							</div>
 						</div>

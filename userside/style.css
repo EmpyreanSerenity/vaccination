@@ -211,7 +211,7 @@ html {
   font-size: 15px; }
 
 body {
-  color: #8e9ca5;
+  color: #000000;
   font-family: "Roboto", "Open Sans", sans-serif;
   font-weight: 300;
   line-height: 1.5; }
@@ -263,7 +263,7 @@ form input[type="submit"], form button, form input[type="reset"] {
   padding: 10px 25px;
   border-radius: 5px;
   box-shadow: 0 1px 1px rgba(0, 0, 0, 0.3);
-  color: #8e9ca5;
+  color: #000000;
   -webkit-transition: .3s ease;
           transition: .3s ease; }
   .button.back, form input.back[type="submit"], form button.back, form input.back[type="reset"] {
@@ -1175,7 +1175,7 @@ form input[type="submit"], form button, form input[type="reset"] {
     border: none;
     font-size: 20px;
     font-size: 1.3333333333em;
-    color: #8e9ca5;
+    color: #000000;
     outline: none;
     display: none;
     padding: 20px; }
@@ -1209,7 +1209,7 @@ form input[type="submit"], form button, form input[type="reset"] {
         font-weight: 400;
         padding: 32px 20px;
         display: block;
-        color: #8e9ca5;
+        color: #000000;
         -webkit-transition: .3s ease;
                 transition: .3s ease;
         border-bottom: 2px solid transparent;
@@ -1230,7 +1230,7 @@ form input[type="submit"], form button, form input[type="reset"] {
     background: #edf2f4;
     list-style: none; }
     .mobile-navigation .menu a {
-      color: #8e9ca5;
+      color: #000000;
       padding: 15px 20px;
       display: block;
       text-align: center;
@@ -1698,7 +1698,7 @@ figure {
   .arrow-list li {
     padding: 10px 0 10px 10px; }
     .arrow-list li a {
-      color: #8e9ca5;
+      color: #000000;
       -webkit-transition: .3s ease;
               transition: .3s ease; }
       .arrow-list li a:hover {

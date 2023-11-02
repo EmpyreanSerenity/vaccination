@@ -13,8 +13,8 @@ $elements=array(
 
 $labels=array('hname'=>"healthcenter name",'hregion'=>"healthcenter region",'description'=>"healthcenter description");
 $rules=array(
-    "hname"=>array("required"=>true,"minlength"=>3,"maxlength"=>20,"alphaspaceonly"=>true),
-    "hregion"=>array("required"=>true,"minlength"=>1,"maxlength"=>20,"alphaonly"=>true),
+    "hname"=>array("required"=>true,"minlength"=>3,"maxlength"=>50,"alphaspaceonly"=>true),
+    "hregion"=>array("required"=>true,"minlength"=>1,"maxlength"=>50,"alphaonly"=>true),
     "description"=>array("required"=>true),
      
 );

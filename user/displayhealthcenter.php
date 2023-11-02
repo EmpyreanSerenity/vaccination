@@ -1,6 +1,6 @@
 
 <?php require('../config/autoload.php'); ?>
-<?php include("header2.php");	?>
+<?php include("header.php");	?>
 
 
 
@@ -42,7 +42,7 @@ if(isset($_SESSION['email']))
 							$childid = isset($_GET['id4']) ? $_GET['id4'] : '';
 							$dob = isset($_GET['dob']) ? $_GET['dob'] : '';
 						
-							 $_SESSION['ch_id']=$childid;
+							 $_SESSION['cid']=$childid;
 							$dob1 = new DateTime($dob);
 							$now = new DateTime();
 							$diff = $now->diff($dob1);
@@ -75,7 +75,7 @@ $info=$dao->query($q);
 							<div class="col-md-6">
     <h3 class="project-title" style="color: black"></h3>
     <div class="health-center-info">
-      <!--<a href="selectchild.php?id=<?= $info[$i]["hid"]?>">-->
+      <!-- <a href="selectchild.php?id=<?= $info[$i]["hid"]?>"> -->
         <img style="width:200px; height:200px" src=<?php echo BASE_URL."upload/".$info[$i]["himage"]; ?> alt="Health Center Image" class="img-responsive" />
       </a>
 	  <br></br>

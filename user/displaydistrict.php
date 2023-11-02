@@ -41,7 +41,7 @@ if(isset($_SESSION['email']))
 							$childid = isset($_GET['id4']) ? $_GET['id4'] : '';
 							$dob = isset($_GET['dob']) ? $_GET['dob'] : '';
 						
-							 $_SESSION['ch_id']=$childid;
+							 $_SESSION['cid']=$childid;
 							$dob1 = new DateTime($dob);
 							$now = new DateTime();
 							$diff = $now->diff($dob1);

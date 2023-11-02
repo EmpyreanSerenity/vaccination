@@ -18,6 +18,7 @@ if(isset($_POST['signin']))
 		if($info=$dao->login($data,$table))
 		{
 		$_SESSION['username']=$info['username'];
+        $_SESSION['pid']=$info['pid'];
 		header('location:index2.php');
 		}
 		else

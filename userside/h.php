@@ -39,7 +39,7 @@ $date=date('Y-m-d',time());
 
 }
 
-$q="select bookid,vname,ch_firstname,hname,dname,book_date,book_time,b.status from health h,book b,vacc v,district d where h.hid = b.hid and v.vid=b.vid and h.did=d.did and h.hid=".$hid_id;
+$q="select bookid,vname,cfirstname,hname,dname,book_date,book_time,b.status from health h,book b,vacc v,district d where h.hid = b.hid and v.vid=b.vid and h.did=d.did and h.hid=".$hid_id;
 $info=$dao->query($q);
 ?> <body style="background-color:#E5F4F6">
 <div class="container_gray_bg" id="home_feat_1">
@@ -79,7 +79,7 @@ $info=$dao->query($q);
 
                    <tr style="color:black;height:50px;" id=<?php echo $info[$i]["bookid"] ?>>
                    <td>  <?php echo $c+1; ?> </td>
-                   <td> <?php echo $info[$i]["ch_firstname"]; ?> </td>
+                   <td> <?php echo $info[$i]["cfirstname"]; ?> </td>
                    <td>  <?php echo $info[$i]["vname"]; ?></td>
                    <td> <?php echo $info[$i]["book_date"]; ?></td>
                    <td> <?php echo $info[$i]["book_time"]; ?></td>

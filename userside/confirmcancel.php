@@ -4,7 +4,7 @@
 	include("header.php");
 	$dao=new DataAccess();
 $elements=array(
-	"s_time"=>"","v_id"=>"","date"=>"","ch_id"=>""
+	"s_time"=>"","v_id"=>"","date"=>"","cid"=>""
         );
 $form=new FormAssist($elements,$_POST);
 
@@ -12,7 +12,7 @@ $id= $_GET['id'];
 $vid=$_SESSION['vid'];
 $hid=$_SESSION['hid'];
 
-$q="select * from book b, vacc v, health h where b.vid=v.vid and h.hid=b.hid and bookid=".$id;
+$q="select * from booking b, vacc v, health h where b.vid=v.vid and h.hid=b.hid and bookid=".$id;
 $info=$dao->query($q);
 
 
@@ -20,18 +20,18 @@ $info=$dao->query($q);
 
 $date1=date('Y-m-d',time());
 $elements=array(
-        "ch_id"=>"","vid"=>"","s_time"=>"","slotid"=>"","hid"=>"","ch_firstname"=>"","book_date"=>"","book_time"=>"");
+        "cid"=>"","vid"=>"","s_time"=>"","slotid"=>"","hid"=>"","cfirstname"=>"","book_date"=>"","book_time"=>"");
 
 
 $form=new FormAssist($elements,$_POST);
 //$file=new FileUpload();
-$labels=array('ch_id'=>"child Id",'vid'=>"vaccine Id",'hid'=>"healthcenter Id",'ch_firstname'=>"Child firstname",'cur_date'=>"current date",'book_date'=>"booking date",'book_time'=>"booking time");
+$labels=array('cid'=>"child Id",'vid'=>"vaccine Id",'hid'=>"healthcenter Id",'cfirstname'=>"Child firstname",'cur_date'=>"current date",'book_date'=>"booking date",'book_time'=>"booking time");
 
 $rules=array(
   
 	"vid"=>array("required"=>true,"minlength"=>1,"maxlength"=>20),
 	"hid"=>array("required"=>true,"minlength"=>1,"maxlength"=>20),
-	"ch_firstname"=>array("required"=>true),
+	"cfirstname"=>array("required"=>true),
        
     "book_date"=>array("required"=>true),
 
@@ -42,7 +42,7 @@ $rules=array(
 );
 	
 $validator = new FormValidator($rules,$labels);
-if(isset($_POST["book"]))
+if(isset($_POST["booking"]))
 {
     echo"<script> location.replace('cancel.php?id=$id'); </script>";
 		    
@@ -99,8 +99,8 @@ if(isset($_POST["book"]))
 								<div class="col-md-6">
 										<div class="form-group">
 											<span class="form-label">child name</span>
-											<input class="form-control" value= "<?php  echo $info[0]["ch_firstname"] ?>" name="ch_firstname" type="text"  required readonly >
-											<?= $validator->error('ch_firstname'); ?>
+											<input class="form-control" value= "<?php  echo $info[0]["cfirstname"] ?>" name="cfirstname" type="text"  required readonly >
+											<?= $validator->error('cfirstname'); ?>
 
 										</div>
 									</div>
@@ -153,7 +153,7 @@ if(isset($_POST["book"]))
    </div>
 
 								<div class="form-btn">
-								<button class="submit-btn" name="book">Cancel</button>
+								<button class="submit-btn" name="booking">Cancel</button>
 					         		
 								</div>
 							</form>

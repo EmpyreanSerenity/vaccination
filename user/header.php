@@ -36,7 +36,7 @@ $a=$_SESSION['email'];
 			<header class="site-header" data-bg-image="">
 				<div class="container">
 					<div class="header-bar">
-						<a href="index2.php" class="branding">
+						<a href="index.php" class="branding">
 							<img src="images/childvaccinelogo.png" alt="" class="logo">
 							<div class="logo-type">
 								<h1 class="site-title">ChildHealthKerala</h1>
@@ -47,15 +47,11 @@ $a=$_SESSION['email'];
 						<nav class="main-navigation">
 							<button class="menu-toggle"><i class="fa fa-bars"></i></button>
 							<ul class="menu">
-								<li class="home menu-item"><a href="index.php"><img src="images/home-icon.png" alt="Home"></a></li>
-								<li class="menu-item"><a href="profile.php"><?php echo $a ?> </a></li>
-								<li class="menu-item"><a href="login.php">Add Child </a></li>
-								<li class="menu-item"><a href="login.php">My Child </a></li>
-								<li class="menu-item"><a href="displayvaccine.php">Vaccines</a></li>
-								
-	                            <li class="menu-item"><a href="viewbooking1.php">View Bookings</a></li>
-								<li class="menu-item"><a href="plogout.php">Logout</a></li>
-							
+							<li class="home menu-item"><a href="index.php"><img src="images/home-icon.png" alt="Home"></a></li>
+								<li class="menu-item"><a href="contactus1.php">Contact us</a></li>
+								<li class="menu-item"><a href="healthlogin.php">HealthCenter</a></li>
+								<li class="menu-item"><a href="registration.php">Register</a></li>
+								<li class="menu-item"><a href="login.php">Login</a></li>
 							</ul>
 						</nav>
 
@@ -87,7 +83,7 @@ $a=$_SESSION['email'];
 							<ul class="menu">
 								<li class="home menu-item"><a href="index.php"><img src="images/home-icon.png" alt="Home"></a></li>
 								<li class="menu-item"><a href="contactus1.php">Contact us</a></li>
-								<li class="menu-item"><a href="healthlogin.php">Healthworker</a></li>
+								<li class="menu-item"><a href="healthlogin.php">HealthCenter</a></li>
 								<li class="menu-item"><a href="registration.php">Register</a></li>
 								<li class="menu-item"><a href="login.php">Login</a></li>
 							

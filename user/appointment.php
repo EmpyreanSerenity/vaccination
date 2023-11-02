@@ -370,7 +370,7 @@ echo "Error occured";
       </div>
     </section>
    
-    <div class="text-center"><input class="appointment-btn scrollto " type="button"  id="Book" name="book" value="Book Appointment"  disabled></div>
+    <div class="text-center"><input class="appointment-btn scrollto " type="button"  id="Book" name="booking" value="Book Appointment"  disabled></div>
     
         </form>
 

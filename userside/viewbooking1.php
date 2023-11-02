@@ -14,7 +14,7 @@
       
       if(isset($_SESSION[ 'cdate'])) { $date=$_SESSION[
       'cdate']; } else { $date=date( 'Y-m-d',time()); }
-       $q="select bookid,vname,dname, ch_firstname,hname,book_date,book_time,b.status from health h,book b,vacc v, district d where h.hid = b.hid and v.vid=b.vid and h.did= d.did and book_email='".$_SESSION['email']."'";
+       $q="select bookid,vname,dname, cfirstname,hname,book_date,book_time,b.status from health h,booking b,vacc v, district d where h.hid = b.hid and v.vid=b.vid and h.did= d.did and book_email='".$_SESSION['email']."'";
        $info=$dao-> query($q); ?>
         
         <body style="background-color:#E5F4F6">
@@ -63,7 +63,7 @@
                               <?php echo $c+1; ?>
                             </td>
                             <td>
-                              <?php echo $info[$i][ "ch_firstname"]; ?>
+                              <?php echo $info[$i][ "cfirstname"]; ?>
                             </td>
                             <td>
                               <?php echo $info[$i][ "vname"]; ?>

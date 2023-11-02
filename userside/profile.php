@@ -57,7 +57,7 @@ $info2=$dao->query($q2);
                                                                         $count= count($info2);
                                                                         while($i<$count)
                                                                         { ?>
-                                                                        <h4 class="text-muted f-w-400"><?php  echo $info2[$i]['ch_firstname'];?> &nbsp;<?php echo $info2[0]['ch_lastname']; ?> </h4>
+                                                                        <h4 class="text-muted f-w-400"><?php  echo $info2[$i]['cfirstname'];?> &nbsp;<?php echo $info2[0]['clastname']; ?> </h4>
                                                                         <?php $i++; } }?>
                                                                     </div>
                                                                         

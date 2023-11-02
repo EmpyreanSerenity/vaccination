@@ -3,7 +3,7 @@
 include("header.php");
 $id = $_GET['id'];
 
-$sql = "delete from child where ch_id=".$id;
+$sql = "delete from child where cid=".$id;
 echo $sql;
 $conn->query($sql);
 

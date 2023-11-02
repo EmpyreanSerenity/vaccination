@@ -25,7 +25,7 @@ if(isset($_SESSION['email']))
 
 
 
-     <div class="page-head"  data-bg-image="images/abstract.jpg">
+     <div class="page-head"  data-bg-image="images/5570834.jpg">
 		   <div class="container">
 				 <h2 class="page-title" style="color: white">Select Healthcenter</h2>
 			   <p style="color: white">Choose the healthcenter according to your convenience</p>
@@ -43,7 +43,7 @@ if(isset($_SESSION['email']))
 							$childid = isset($_GET['id4']) ? $_GET['id4'] : '';
 							$dob = isset($_GET['dob']) ? $_GET['dob'] : '';
 						
-							 $_SESSION['ch_id']=$childid;
+							 $_SESSION['cid']=$childid;
 							$dob1 = new DateTime($dob);
 							$now = new DateTime();
 							$diff = $now->diff($dob1);

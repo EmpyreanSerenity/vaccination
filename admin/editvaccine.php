@@ -13,7 +13,7 @@ $elements=array(
 
 $labels=array('vname'=>"Vaccination name","vage"=>" Age Requirements",'description'=>"vaccine description");
 $rules=array(
-    "vname"=>array("required"=>true,"minlength"=>1,"maxlength"=>20,),
+    "vname"=>array("required"=>true,"minlength"=>1,"maxlength"=>50,),
     "vage"=>array("required"=>true,"minlength"=>1,"maxlength"=>20,),
     "description"=>array("required"=>true),
 );
@@ -39,11 +39,8 @@ $data=array(
         'vimage'=>$_POST['vimage'],
         'description'=>$_POST['description'],
     );
-  $condition='vid='.$_GET['vid'];
-  if(isset($flag))
-  {	$data['vimage']=$fileName;
+    $condition='vid='.$_GET['vid'];
 
-  }
     if($dao->update($data,'vaccine',$condition))
     {
         $msg="Successfullly Updated";

@@ -4,7 +4,7 @@
 	include("header.php");
 	$dao=new DataAccess();
 $elements=array(
-	"s_time"=>"","v_id"=>"","date"=>"","ch_id"=>""
+	"s_time"=>"","v_id"=>"","date"=>"","cid"=>""
         );
 $form=new FormAssist($elements,$_POST);
 
@@ -12,7 +12,7 @@ $id= $_GET['id'];
 $vid=$_SESSION['vid'];
 $hid=$_SESSION['hid'];
 
-$q3="select * from child where ch_id=$id";
+$q3="select * from child where cid=$id";
 $info3=$dao->query($q3);
 $q="Select * from vaccslot where hid=$hid and vid=$vid";
 $info=$dao->query($q);
@@ -25,18 +25,18 @@ $info2=$dao->query($q2);
 
 $date1=date('Y-m-d',time());
 $elements=array(
-        "ch_id"=>"","vid"=>"","s_time"=>"","slotid"=>"","hid"=>"","ch_firstname"=>"","book_date"=>"","book_time"=>"");
+        "cid"=>"","vid"=>"","s_time"=>"","slotid"=>"","hid"=>"","cfirstname"=>"","book_date"=>"","book_time"=>"");
 
 
 $form=new FormAssist($elements,$_POST);
 //$file=new FileUpload();
-$labels=array('ch_id'=>"child Id",'vid'=>"vaccine Id",'hid'=>"healthcenter Id",'ch_firstname'=>"Child firstname",'cur_date'=>"current date",'book_date'=>"booking date",'book_time'=>"booking time");
+$labels=array('cid'=>"child Id",'vid'=>"vaccine Id",'hid'=>"healthcenter Id",'cfirstname'=>"Child firstname",'cur_date'=>"current date",'book_date'=>"booking date",'book_time'=>"booking time");
 
 $rules=array(
   
 	"vid"=>array("required"=>true,"minlength"=>1,"maxlength"=>20),
 	"hid"=>array("required"=>true,"minlength"=>1,"maxlength"=>20),
-	"ch_firstname"=>array("required"=>true),
+	"cfirstname"=>array("required"=>true),
        
     "book_date"=>array("required"=>true),
 
@@ -47,11 +47,11 @@ $rules=array(
 );
 	
 $validator = new FormValidator($rules,$labels);
-if(isset($_POST["book"]))
+if(isset($_POST["booking"]))
 {
-$q4="Select * from book where ch_id=$id and vid=$vid";
+$q4="Select * from booking where cid=$id and vid=$vid";
 $count=$dao->query($q4);
-$q5="Select * from book where ch_id=$id and vid=$vid and status=2";
+$q5="Select * from booking where cid=$id and vid=$vid and status=2";
 $count1=$dao->query($q5);
 { 
 	if(!(is_countable($count1)))
@@ -67,11 +67,11 @@ $count1=$dao->query($q5);
 	  } else{
 			
         $data=array(
-				'ch_id'=>$id,
+				'cid'=>$id,
 				
 				'vid'=>$vid,
 				'hid'=>$hid,
-                'ch_firstname'=>$_POST['ch_firstname'],
+                'cfirstname'=>$_POST['cfirstname'],
 				'cur_date'=>$date1,
 				'book_date'=>$_POST['book_date'],
                 'book_time'=>$_POST['s_time'],
@@ -81,7 +81,7 @@ $count1=$dao->query($q5);
 			);
         
            
-			if($dao->insert($data,"book"))
+			if($dao->insert($data,"booking"))
 			{
 			echo "<script> alert('Booking Success');</script> ";
             echo"<script> location.replace('email.php'); </script>";
@@ -153,8 +153,8 @@ else{
 								<div class="col-md-6">
 										<div class="form-group">
 											<span class="form-label">child name</span>
-											<input class="form-control" name="ch_firstname" type="text" value=<?php  echo $info3[0]['ch_firstname'];  ?> required readonly >
-											<?= $validator->error('ch_firstname'); ?>
+											<input class="form-control" name="cfirstname" type="text" value=<?php  echo $info3[0]['cfirstname'];  ?> required readonly >
+											<?= $validator->error('cfirstname'); ?>
 
 										</div>
 									</div>
@@ -216,7 +216,7 @@ else{
    </div>
 
 								<div class="form-btn">
-								<button class="submit-btn" name="book">Book</button>
+								<button class="submit-btn" name="booking">Book</button>
 								
 								</div>
 							</form>

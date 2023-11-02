@@ -12,6 +12,7 @@ $dao=new DataAccess();
 
 ?>
 <?php    
+//$_SESSION['did']=$_GET['id']; 
 if(isset($_SESSION['email']))
 { 
 
@@ -22,10 +23,11 @@ if(isset($_SESSION['email']))
 
 <?php } ?>
 
-     <div class="page-head"  data-bg-image="images/abstract.jpg">
+
+
+     <div class="page-head"  data-bg-image="images/5570834.jpg">
 		   <div class="container">
-				 <h2 class="page-title" style="color: white">Select Vaccine</h2>
-			   <p style="color: white">Choose the vaccine according to your convenience</p>
+				 <h2 class="page-title" style="color: white">Available Vaccine</h2>
 	       </div>
       </div>
 
@@ -47,42 +49,53 @@ if(isset($_SESSION['email']))
 							$months = $diff->format('%m') + 12 * $diff->format('%y');
 
 							 $_SESSION['dob']=$months;
-					
 							
 							
-							 $q="select * from vaccine";
-							 
-
+							 //$hid=$_GET['id']; 
+							 //echo $_SESSION['vid'];
+							 //echo $_SESSION['did'] ;
+							 $q="SELECT * from vaccine";
+				
 $info=$dao->query($q);
-
 //print_r($info);
 
-			$i=0;          
+			$i=0;  
+			if(empty($info))
+			{
+				echo "No Vaccine Available";
+			}        
+
+			else
+			{
 			 while($i<count($info))
 			
-                { $_SESSION['vid']=$info[$i]["vid"];
+                {
 	
 		                 ?>
 							<div class="col-md-6">
-								<div class="checked-box">
-                              <h3 class="project-title" style="color: black"></h3> 
-							 
-								<a href="avilabehealthcentre.php?id=<?= $info[$i]["vid"]?> ">
-								<img style="width:250; height:250" src=<?php echo BASE_URL."upload/".$info[$i]["vimage"]; ?> alt=" " class="img-responsive" />
-								<h2><?php echo $info[$i]["vname"]?></h2></a>
-								<h2><?php echo $info[$i]["vage"]?></h2></a>	
+    <h3 class="project-title" style="color: black"></h3>
+    <div class="vaccine-info">
+      <a href="selectchild.php?id=<?= $info[$i]["vid"]?>">
+        <img style="width:200px; height:200px" src=<?php echo BASE_URL."uploads/".$info[$i]["vimage"]; ?> alt="Vaccine Image" class="img-responsive" />
+      </a>
+	  <br></br>
+      <div class="vaccine-details">
+        <h3><?php echo $info[$i]["vname"]?></h3>
+        <p><strong><?php echo $info[$i]["description"]?><s]</strong></p>
+      </div>
+    </div>
+</div>
 
-								
-							</div>
-						</div>
 				
 		
 				<?php 
 				$i++;
-				} ?>
+				}
+			 } ?>
+				
 			</div>
 		</div>
 	</div>
 	
 	
-		<?php include("footer2.php");	?>
+		<?php include("footer.php");	?>

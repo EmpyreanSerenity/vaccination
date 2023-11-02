@@ -19,17 +19,17 @@
 require('../config/autoload.php'); 
 $dao=new DataAccess();
 $elements=array(
-        "pid"=>"","ch_firstname"=>"","ch_lastname"=>"","gender"=>"","dob"=>"");
+        "pid"=>"","cfirstname"=>"","clastname"=>"","gender"=>"","dob"=>"");
 
 
 $form=new FormAssist($elements,$_POST);
 //$file=new FileUpload();
-$labels=array('pid'=>"Parent Id",'ch_firstname'=>"Child firstname",'ch_lastname'=>"child firstname",'gender'=>"Gender",'dob'=>"Date of Birth");
+$labels=array('pid'=>"Parent Id",'cfirstname'=>"Child firstname",'clastname'=>"child firstname",'gender'=>"Gender",'dob'=>"Date of Birth");
 
 $rules=array(
     
-	 "ch_firstname"=>array("required"=>true,"alphaonly"=>true),
-    "ch_lastname"=>array("required"=>true,"alphaonly"=>true),     
+	 "cfirstname"=>array("required"=>true,"alphaonly"=>true),
+    "clastname"=>array("required"=>true,"alphaonly"=>true),     
     "gender"=>array("required"=>true),
     "dob"=>array("required"=>true),
     
@@ -44,8 +44,8 @@ if(isset($_POST["submit"]))
 		{
         $data=array(
 				'pid'=>$_SESSION['pid'],
-                'ch_firstname'=>$_POST['ch_firstname'],
-				'ch_lastname'=>$_POST['ch_lastname'],
+                'cfirstname'=>$_POST['cfirstname'],
+				'clastname'=>$_POST['clastname'],
 				'gender'=>$_POST['gender'],
                 'dob'=>$_POST['dob']
                 
@@ -84,15 +84,15 @@ if(isset($_POST["submit"]))
                         <div class="form-row">
                             <div class="form-group">
                                 <label for="first_name">First name</label>
-                                <input type="text" class="form-input" name="ch_firstname" id="first_name" required/>
+                                <input type="text" class="form-input" name="cfirstname" id="first_name" required/>
                                 <span style="color:red;">
-							<?= $validator->error('ch_firstname'); ?></span>
+							<?= $validator->error('cfirstname'); ?></span>
                             </div>
                             <div class="form-group">
                                 <label for="last_name">Last name</label>
-                                <input type="text" class="form-input" name="ch_lastname" id="last_name" required/>
+                                <input type="text" class="form-input" name="clastname" id="last_name" required/>
                                 <span style="color:red;">
-							<?= $validator->error('ch_lastname'); ?></span>
+							<?= $validator->error('clastname'); ?></span>
                             </div>
                         </div>
                         <div class="form-row">
@@ -119,7 +119,7 @@ if(isset($_POST["submit"]))
                                 Female
                             <input class ="form-input"type="radio" id="gender" name="gender" value="f" required>
 
-                            <?= $validator->error('ch_firstname'); ?></span>
+                            <?= $validator->error('cfirstname'); ?></span>
                             </div >    
                           
                         
