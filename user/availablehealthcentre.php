@@ -12,6 +12,7 @@ $dao=new DataAccess();
 
 ?>
 <?php    
+$_SESSION['vid']=$_GET['id'];
 //$_SESSION['did']=$_GET['id']; 
 if(isset($_SESSION['email']))
 { 
@@ -25,7 +26,7 @@ if(isset($_SESSION['email']))
 
 
 
-     <div class="page-head"  data-bg-image="images/5570834.jpg">
+     <div class="page-head"  data-bg-image="images/abstract.jpg">
 		   <div class="container">
 				 <h2 class="page-title" style="color: white">Select Healthcenter</h2>
 			   <p style="color: white">Choose the healthcenter according to your convenience</p>
@@ -95,4 +96,4 @@ $info=$dao->query($q);
 	</div>
 	
 	
-		<?php include("footer2.php");	?>
+		<?php include("footer.php");	?>

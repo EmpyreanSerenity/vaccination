@@ -1,4 +1,3 @@
-
 <?php require('../config/autoload.php'); ?>
 <?php include("header2.php");	?>
 
