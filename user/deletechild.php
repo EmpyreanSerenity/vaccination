@@ -1,9 +1,9 @@
-<?php $conn = new mysqli("localhost","root", "", "vaccine"); ?>
+<?php $conn = new mysqli("localhost","root", "", "vaccination"); ?>
 <?php
 include("header2.php");
-$id = $_GET['id'];
+$cid = $_GET['cid'];
 
-$sql = "delete from child where cid=".$id;
+$sql = "delete from child where cid=$cid";
 echo $sql;
 $conn->query($sql);
 

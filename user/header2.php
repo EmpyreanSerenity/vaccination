@@ -36,7 +36,7 @@ $a=$_SESSION['email'];
 			<header class="site-header" data-bg-image="">
 				<div class="container">
 					<div class="header-bar">
-						<a href="" class="branding">
+						<a href="index2.php" class="branding">
 							<img src="images/childvaccinelogo.png" alt="" class="logo">
 							<div class="logo-type">
 								<h1 class="site-title">ChildHealthKerala</h1>
@@ -73,7 +73,7 @@ $a=$_SESSION['email'];
 			<header class="site-header" data-bg-image="">
 				<div class="container">
 					<div class="header-bar">
-						<a href="" class="branding">
+						<a href="index2.php" class="branding">
 							<img src="images/childvaccinelogo.png" alt="" class="logo">
 							<div class="logo-type">
 								<h1 class="site-title">ChildHealthKerala</h1>

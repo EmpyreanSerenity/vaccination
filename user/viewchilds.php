@@ -28,7 +28,8 @@ if(isset($_SESSION['email']))
 							
 					$_SESSION['pid']	=$_SESSION['pid'];
 					$pid=$_SESSION['pid'];
-			 $q="select * from child c where pid=".$pid. "";
+					$q = "SELECT * FROM child c where $pid="" ";
+
 
 $info=$dao->query($q);
 

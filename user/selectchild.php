@@ -1,6 +1,6 @@
 
 <?php require('../config/autoload.php'); ?>
-<?php include("header.php");	?>
+<?php include("header2.php");	?>
 
 <style>
 div.a {
@@ -109,4 +109,4 @@ $info=$dao->query($q);
 	</div>
 	
 	
-		<?php include("footer.php");	?>
+		<?php include("footer2.php");	?>
