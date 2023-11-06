@@ -43,7 +43,7 @@ $info=$dao->query($q);
 				 <div class="col-md-6">
 				 <div class="boxed-icon">
 							<img src="images/boy.jpg" alt="" class="icon" style="width:100px; height:100px;">
-                              <h3 style="color: black"><?php echo $info[$i]["cfirstname"]?> <?php echo $info[$i]["clastname"]?></h3> 
+                              <h3 style="color: black"><?php echo $info[$i]["ch_firstname"]?> <?php echo $info[$i]["ch_lastname"]?></h3> 
 					         <table style="color: black;"> 
 					        <tr><td><b>DOB:</b></td><td> <?php echo $info[$i]["dob"]?></td></tr>
 							<tr><td><br></td></tr>
@@ -64,7 +64,7 @@ $info=$dao->query($q);
 					 <div class="col-md-6">
 				 <div class="boxed-icon">
 							<img src="images/girl.jpg" alt="" class="icon" style="width:100px; height:100px;">
-                              <h3 style="color: black"><?php echo $info[$i]["cfirstname"]?> <?php echo $info[$i]["clastname"]?></h3> 
+                              <h3 style="color: black"><?php echo $info[$i]["ch_firstname"]?> <?php echo $info[$i]["ch_lastname"]?></h3> 
 							<table style="color: black;"> 
 					        <tr><td><b>DOB:</b></td><td> <?php echo $info[$i]["dob"]?></td></tr>
 							<tr><td><br></td></tr>

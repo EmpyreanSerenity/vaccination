@@ -65,7 +65,7 @@ th, td {
         );  
 
 
-    $fields=array('bookid','cfirstname','vname','hname','book_date','book_time');
+    $fields=array('bookid','ch_firstname','vname','hname','book_date','book_time');
 
     $users=$dao->selectAsTable($fields,'booking as b',1,$join,$actions,$config);
     echo $users

@@ -5,13 +5,13 @@ include("header.php");
 $dao=new DataAccess();
 $info=$dao->getData('*','child','cid='.$_GET['id']);
 $elements=array(
-       "cfirstname"=>$info[0]['cfirstname'],"clastname"=>$info[0]['clastname'],"gender"=>$info[0]['gender'],"dob"=>$info[0]['dob']
+       "ch_firstname"=>$info[0]['ch_firstname'],"ch_lastname"=>$info[0]['ch_lastname'],"gender"=>$info[0]['gender'],"dob"=>$info[0]['dob']
 );
 $form = new FormAssist($elements,$_POST);
-$labels=array('cfirstname'=>"Child's first name",'clastname'=>"Child's last name","gender"=>"Gender","dob"=>"Date of Birth");
+$labels=array('ch_firstname'=>"Child's first name",'ch_lastname'=>"Child's last name","gender"=>"Gender","dob"=>"Date of Birth");
 $rules=array(
-    "cfirstname"=>array("required"=>true),
-    "clastname"=>array("required"=>true),
+    "ch_firstname"=>array("required"=>true),
+    "ch_lastname"=>array("required"=>true),
 	"gender"=>array("required"=>true,"exist"=>array("m","f")),
 	"dob"=>array("required"=>true),
 	);
@@ -23,8 +23,8 @@ if($validator->validate($_POST))
 $data=array(
    
 	'pid'=>$_SESSION['pid'],
-	 'cfirstname'=>$_POST['cfirstname'],
-        'clastname'=>$_POST['clastname'],
+	 'ch_firstname'=>$_POST['ch_firstname'],
+        'ch_lastname'=>$_POST['ch_lastname'],
 	 'gender'=>$_POST['gender'],
 	'dob'=>$_POST['dob'],
 
@@ -72,9 +72,9 @@ header('location:viewchilds.php');
               <div class="col-md-8">
 				
 					 <td> <label for="">Name:</label></td>
-						<td ><?= $form->textBox('cfirstname',array('class'=>'form-control')); ?></td></tr>
+						<td ><?= $form->textBox('ch_firstname',array('class'=>'form-control')); ?></td></tr>
 				        <tr><td></td><td><span style="color:red;">
-						   <?= $validator->error('cfirstname'); ?></td></tr></div></div>
+						   <?= $validator->error('ch_firstname'); ?></td></tr></div></div>
 	             
 <tr><td><br></td></tr>
   <tr>
@@ -82,9 +82,9 @@ header('location:viewchilds.php');
               <div class="col-md-8">
 				
 					 <td> <label for="">Name:</label></td>
-						<td ><?= $form->textBox('clastname',array('class'=>'form-control')); ?></td></tr>
+						<td ><?= $form->textBox('ch_lastname',array('class'=>'form-control')); ?></td></tr>
 				        <tr><td></td><td><span style="color:red;">
-				         <?= $validator->error('clastname'); ?></td></tr></div></div>
+				         <?= $validator->error('ch_lastname'); ?></td></tr></div></div>
 	           
 <tr><td><br></td></tr>
 

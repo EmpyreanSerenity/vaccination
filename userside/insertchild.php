@@ -5,7 +5,7 @@ include("header.php");
 
 $file=new FileUpload();
 $elements=array(
-    "pid"=>"","cfirstname"=>"","clastname"=>"","gender"=>"","dob"=>"");
+    "pid"=>"","ch_firstname"=>"","ch_lastname"=>"","gender"=>"","dob"=>"");
 
 
 $form=new FormAssist($elements,$_POST);
@@ -14,13 +14,13 @@ $form=new FormAssist($elements,$_POST);
 
 $dao=new DataAccess();
 
-$labels=array('pid'=>"Parent Id",'cfirstname'=>"Child Firstname",'clastname'=>"Child Lastname",'gender'=>"Gender",'dob'=>"Date of Birth");
+$labels=array('pid'=>"Parent Id",'ch_firstname'=>"Child Firstname",'ch_lastname'=>"Child Lastname",'gender'=>"Gender",'dob'=>"Date of Birth");
 
 $rules=array(
     
     "pid"=>array("required"=>true),
-    "cfirstname"=>array("required"=>true),
-    "clastname"=>array("required"=>true),
+    "ch_firstname"=>array("required"=>true),
+    "ch_lastname"=>array("required"=>true),
     "gender"=>array("required"=>true),
     "dob"=>array("required"=>true)
 
@@ -40,8 +40,8 @@ if(isset($_POST["btn_insert"]))
 $data=array(
         
     'pid'=>$_POST['pid'],
-    'cfirstname'=>$_POST['cfirstname'],
-    'clastname'=>$_POST['clastname'],
+    'ch_firstname'=>$_POST['ch_firstname'],
+    'ch_lastname'=>$_POST['ch_lastname'],
     'gender'=>$_POST['gender'],
     'dob'=>$_POST['dob'],
     );
@@ -91,8 +91,8 @@ $options = $dao->createOptions('pname','pid',"parent");
 <div class="row">
                     <div class="col-md-6">
 Child Firstname:
-<?= $form->textBox('cfirstname',array('class'=>'form-control')); ?>
-<?= $validator->error('cfirstname'); ?>
+<?= $form->textBox('ch_firstname',array('class'=>'form-control')); ?>
+<?= $validator->error('ch_firstname'); ?>
 
 
 </div>
@@ -102,8 +102,8 @@ Child Firstname:
                     <div class="col-md-6">
 Child Lastname:
 
-<?= $form->textBox('clastname',array('class'=>'form-control')); ?>
-<?= $validator->error('clastname'); ?>
+<?= $form->textBox('ch_lastname',array('class'=>'form-control')); ?>
+<?= $validator->error('ch_lastname'); ?>
 
 
 

@@ -58,7 +58,7 @@ th, td {
       $join=array(
         'vacc as v'=>array('v.vid=b.vid','join'),'health as h'=>array('h.hid=b.hid','join'),
         );  
-    $fields=array('bookid','cfirstname','vname','hname','book_date','book_time');
+    $fields=array('bookid','ch_firstname','vname','hname','book_date','book_time');
 
 
     $users=$dao->selectAsTable($fields,'booking as b',$condition,$join,$actions,$config);

@@ -20,18 +20,18 @@ $info=$dao->query($q);
 
 $date1=date('Y-m-d',time());
 $elements=array(
-        "cid"=>"","vid"=>"","s_time"=>"","slotid"=>"","hid"=>"","cfirstname"=>"","book_date"=>"","book_time"=>"");
+        "cid"=>"","vid"=>"","s_time"=>"","slotid"=>"","hid"=>"","ch_firstname"=>"","book_date"=>"","book_time"=>"");
 
 
 $form=new FormAssist($elements,$_POST);
 //$file=new FileUpload();
-$labels=array('cid'=>"child Id",'vid'=>"vaccine Id",'hid'=>"healthcenter Id",'cfirstname'=>"Child firstname",'cur_date'=>"current date",'book_date'=>"booking date",'book_time'=>"booking time");
+$labels=array('cid'=>"child Id",'vid'=>"vaccine Id",'hid'=>"healthcenter Id",'ch_firstname'=>"Child firstname",'cur_date'=>"current date",'book_date'=>"booking date",'book_time'=>"booking time");
 
 $rules=array(
   
 	"vid"=>array("required"=>true,"minlength"=>1,"maxlength"=>20),
 	"hid"=>array("required"=>true,"minlength"=>1,"maxlength"=>20),
-	"cfirstname"=>array("required"=>true),
+	"ch_firstname"=>array("required"=>true),
        
     "book_date"=>array("required"=>true),
 
@@ -99,8 +99,8 @@ if(isset($_POST["booking"]))
 								<div class="col-md-6">
 										<div class="form-group">
 											<span class="form-label">child name</span>
-											<input class="form-control" value= "<?php  echo $info[0]["cfirstname"] ?>" name="cfirstname" type="text"  required readonly >
-											<?= $validator->error('cfirstname'); ?>
+											<input class="form-control" value= "<?php  echo $info[0]["ch_firstname"] ?>" name="ch_firstname" type="text"  required readonly >
+											<?= $validator->error('ch_firstname'); ?>
 
 										</div>
 									</div>
